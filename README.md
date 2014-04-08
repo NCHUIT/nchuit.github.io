@@ -93,6 +93,11 @@
 - [About.me][18]
 - [個人頁面][19]
 
+#### 西瓜 (PastLeo)
+和電腦有關的東西都有接觸過，目前在學生會擔任資訊部長，請多指教～
+
+- [About.me][24]
+
 #### 下一位
 ......
 
@@ -132,3 +137,4 @@
   [21]: http://git-scm.com/book/zh
   [22]: https://help.github.com/articles/using-pull-requests
   [23]: http://daringfireball.net/projects/markdown/syntax
+  [24]: http://about.me/chiuguanyu
