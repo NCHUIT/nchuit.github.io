@@ -22,21 +22,23 @@
 ## 活動
 
 ### 短期或單日活動
-- none
+1. [\[興資課\] JavaScript 引導入門][5]（2014/04/24）
+2. [DevOps #1：Linux 基本操作和管理][6]（2014/05/08）
+3. [DevOps #2：LAMP/LNMP 網站架設和管理][7]（2014/05/23）
 
 ### 定期活動與課程
 #### 資訊部
-- 程式設計訓練：禮拜二，晚上七點，於圖書館-讀者討論室 by [和風信使][7]
-- 資訊部會：每兩週一次，預定禮拜四（視情況調整），晚上七點，於學生會辦，與部課隔週。 by [西瓜][5]
-- 資訊部課：每兩週一次，預定禮拜四（視情況調整），晚上七點，於資訊社辦，與部會隔週。 by [西瓜][5]
+- 禮拜二，晚上七點，圖書館讀者討論室：程式設計訓練 by [和風信使][8]
+- 資訊部會：每兩週一次，預定禮拜四（視情況調整），晚上七點，於學生會辦，與部課隔週。 by [西瓜][9]
+- 資訊部課：每兩週一次，預定禮拜四（視情況調整），晚上七點，於資訊社辦，與部會隔週。 by [西瓜][10]
 ```
 // 未來期望每月選一週週末舉辦黑客松
 ```
+
 #### 資訊社
 - 禮拜二，中午整點，資訊社辦：資訊社午餐小聚
-- 禮拜二，晚上七點，圖書館-讀者討論室：CPE by [和風信使][7]
-- 禮拜二，晚上七點，資訊社辦：電腦硬體維修工讀培訓班 by [樂富][8]
-- 禮拜三，晚上七點，資訊社辦：Drupal 蓋站計劃 by [樂富][9]
+- 禮拜二，晚上七點，資訊社辦：電腦硬體維修工讀培訓班 by [樂富][11]
+- 禮拜三，晚上七點，資訊社辦：Drupal 蓋站計劃 by [樂富][12]
 
 ## 社群與平台
 ### 組織
@@ -51,10 +53,10 @@
 
 總結來說，資訊部是一個專注於網站開發與資訊透明的電資同好組織，對於此領域有興趣的同好可以與現任部長西瓜聯絡，詳細了解。
 
-- 部長：[西瓜 (Faceboook)][10]
-- 社團：[興大.學生會.資訊部][11]
-- 作品：[興大學生會 官方網站][12]
-- 維基：[黑天鵝會誌 資訊部條目][13]
+- 部長：[西瓜 (Faceboook)][13]
+- 社團：[興大.學生會.資訊部][14]
+- 作品：[興大學生會 官方網站][15]
+- 維基：[黑天鵝會誌 資訊部條目][16]
 - _備註：這邊的學生會泛指學生會行政中心。_
 
 #### 興大資訊科學研習社（Abbr: 資訊社）
@@ -64,8 +66,8 @@
 
 總之，資訊社是以開課為導向的電資同好組織，且主要推廣對象是普通學生。若是有普通學生想要對這塊領域入門，資訊社是一個很好的選擇。也歡迎已有基礎的學生擔任講師開課，資訊社會協助處理場地與時間的事宜。很適合任何對電資有興趣或是廣泛學習的同學。
 
-- 社長：[果醬 (Faceboook)][14]
-- 社團：[中興大學資訊科學研習社][15]
+- 社長：[果醬 (Faceboook)][17]
+- 社團：[中興大學資訊科學研習社][18]
 
 #### 興大學生資訊發展委員會（Abbr: 興資會）
 起自於興資三角計劃的一環，並作為資訊部的成立案若被議會否決的備案。興資會是屬於一個架構體系，作為同合興大電資資源的一個框架，由資訊部發起，以資訊部與資訊社為底，並聯絡計資中心與電資相關的系所辦公室或系學會，協助解決各項需求。通常為授課場地的提供，或是相關系所學生想要的課程開設等等。並會聯合有興趣的系所開設相關競賽或是黑客松，活化興大資訊風氣，鼓勵同好互相交流。
@@ -79,61 +81,65 @@
 
 除了開課的媒合平台，這邊也開放同學發問電腦的問題或求助，有關電腦購置、維修，或是想知道有什麼軟體可以解決你的問題的，都可以在這邊發文詢問。也會有許多同學在這邊分享他們在別處看到對於同學很有幫助的資訊相關文章，這個面向也逐漸取代開課媒合，成為這個FB社團的主要方向了。
 
-- 社團：[中興-資訊交流網][16]
+- 社團：[中興-資訊交流網][19]
 
 #### 興大電資同好社群（Abbr: 電資同好社群）
 在目前體系對於資電領域有興趣的自我學習者缺發一個交流的平台，但由於興大開發者論壇的程式陸續遇到問題，加上考量到推廣到熱絡使用前會有一段空窗期，且日前又在PTT興大版詢問相關問題，遂決定成立一個電資同好社群FB社團，提供對於資電領域有興趣但找不好同好的興大同學，一個相互交流的平台。有別於中興-資訊交流網的客群，這邊比較偏向願意向專業領域自我學習與交流的夥伴，也希望能在此互相分享一些比較技術性的文章，互相學習與砥礪。
 
-- 社團：[興大電資同好社群][17]
+- 社團：[興大電資同好社群][20]
 
 ## 成員
 #### 凌若虛（Fntsrlike）
 十八屆資訊組組長。擅長網頁程式設計，從後端PHP起家，並且逐漸跨足前端。是一個從二類轉到三類卻去讀一類科系最後跑到二類讀研究所的怪咖。
 
-- [About.me][18]
-- [個人頁面][19]
+- [About.me][21]
+- [個人頁面][22]
 
 #### 西瓜 (PastLeo)
 和電腦有關的東西都有接觸過，目前在學生會擔任資訊部長，請多指教～
 
-- [About.me][24]
+- [About.me][23]
 
 #### 下一位
 ......
 
 
 ## 本頁共筆
-本頁是使用Markdown語法編寫，並利用Github自動頁面產生器生成。若是想要增修本頁面內容，請到本頁面的 [Github Repo][20] 提出Pull Request，經過確認後就會merge進來。
+本頁是使用Markdown語法編寫，並利用Github自動頁面產生器生成。若是想要增修本頁面內容，請到本頁面的 [Github Repo][24] 提出Pull Request，經過確認後就會merge進來。
 
 你可以針對覺得有爭議性，或是措辭可以在更好的語句提出修改，或是充實本頁介紹的內容。若你認同興大電資領域共享與交流的理想，也可以把自己的簡單資料分享在成員上，讓大家一起認識妳。=)
 
 若是不熟相關操作的，可以參考下列文件：
 
-- [Git Book][21]
-- [Github Pull Request教學][22]
-- [Markdwon Syntax][23]
+- [Git Book][25]
+- [Github Pull Request教學][26]
+- [Markdwon Syntax][27]
 
 
   [1]: https://www.facebook.com/groups/190537891119798/
   [2]: https://www.facebook.com/groups/it.nchu/
   [3]: https://www.facebook.com/groups/jshare.tc/
   [4]: https://www.facebook.com/groups/693883194008233/
-  [5]: https://www.facebook.com/ChiuGuanYu
-  [7]: https://www.facebook.com/taichunmin?fref=ts
-  [8]: https://www.facebook.com/jLove885?fref=ts
-  [9]: https://www.facebook.com/jLove885?fref=ts
+  [5]: http://nchueecsec.kktix.cc/events/javascript20140424
+  [6]: http://nchueecsec.kktix.cc/events/devops1
+  [7]: http://nchueecsec.kktix.cc/events/devops2
+  [8]: https://www.facebook.com/taichunmin?fref=ts
+  [9]: https://www.facebook.com/ChiuGuanYu
   [10]: https://www.facebook.com/ChiuGuanYu
-  [11]: https://www.facebook.com/groups/190537891119798/
-  [12]: http://nchusg.org/
-  [13]: http://wiki.nchusg.org/index.php/%E5%AD%B8%E7%94%9F%E6%9C%83:%E8%A1%8C%E6%94%BF%E4%B8%AD%E5%BF%83/%E8%B3%87%E8%A8%8A%E9%83%A8
-  [14]: https://www.facebook.com/tom83615
-  [15]: https://www.facebook.com/groups/it.nchu/
-  [16]: https://www.facebook.com/groups/jshare.tc/
-  [17]: https://www.facebook.com/groups/693883194008233/
-  [18]: http://about.me/fntsrlike
-  [19]: http://fntsr.childish.tw/
-  [20]: https://github.com/fntsrlike/NCHU_eecsec
-  [21]: http://git-scm.com/book/zh
-  [22]: https://help.github.com/articles/using-pull-requests
-  [23]: http://daringfireball.net/projects/markdown/syntax
-  [24]: http://about.me/chiuguanyu
+  [11]: https://www.facebook.com/jLove885?fref=ts
+  [12]: https://www.facebook.com/jLove885?fref=ts
+  [13]: https://www.facebook.com/ChiuGuanYu
+  [14]: https://www.facebook.com/groups/190537891119798/
+  [15]: http://nchusg.org/
+  [16]: http://wiki.nchusg.org/index.php/%E5%AD%B8%E7%94%9F%E6%9C%83:%E8%A1%8C%E6%94%BF%E4%B8%AD%E5%BF%83/%E8%B3%87%E8%A8%8A%E9%83%A8
+  [17]: https://www.facebook.com/tom83615
+  [18]: https://www.facebook.com/groups/it.nchu/
+  [19]: https://www.facebook.com/groups/jshare.tc/
+  [20]: https://www.facebook.com/groups/693883194008233/
+  [21]: http://about.me/fntsrlike
+  [22]: http://fntsr.childish.tw/
+  [23]: http://about.me/chiuguanyu
+  [24]: https://github.com/fntsrlike/NCHU_eecsec
+  [25]: http://git-scm.com/book/zh
+  [26]: https://help.github.com/articles/using-pull-requests
+  [27]: http://daringfireball.net/projects/markdown/syntax
