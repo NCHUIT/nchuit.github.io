@@ -26,12 +26,12 @@
 
 ### 定期活動與課程
 #### 資訊部
-- 禮拜二，晚上七點，圖書館-讀者討論室：小黑松 by [西瓜][5]
-- 禮拜四，晚上七點，學生會辦：資訊部會，與部課隔周。 by [西瓜][5]
-- 禮拜四，晚上七點，資訊社辦：資訊部課，與部會隔周。 by [西瓜][5]
-- 星期四，晚上九點，資訊社辦：小黑松。 by [西瓜][6]
-- _資訊部小聚時間，未定。_
-
+- 程式設計訓練：禮拜二，晚上七點，於圖書館-讀者討論室 by [和風信使][7]
+- 資訊部會：每兩週一次，預定禮拜四（視情況調整），晚上七點，於學生會辦，與部課隔週。 by [西瓜][5]
+- 資訊部課：每兩週一次，預定禮拜四（視情況調整），晚上七點，於資訊社辦，與部會隔週。 by [西瓜][5]
+```
+// 未來期望每月選一週週末舉辦黑客松
+```
 #### 資訊社
 - 禮拜二，中午整點，資訊社辦：資訊社午餐小聚
 - 禮拜二，晚上七點，圖書館-讀者討論室：CPE by [和風信使][7]
@@ -119,7 +119,6 @@
   [3]: https://www.facebook.com/groups/jshare.tc/
   [4]: https://www.facebook.com/groups/693883194008233/
   [5]: https://www.facebook.com/ChiuGuanYu
-  [6]: https://www.facebook.com/ChiuGuanYu
   [7]: https://www.facebook.com/taichunmin?fref=ts
   [8]: https://www.facebook.com/jLove885?fref=ts
   [9]: https://www.facebook.com/jLove885?fref=ts
