@@ -130,6 +130,13 @@
 畢竟是當初玩麥塊的時候開始用的，有感情了 (?
 - [年久失修的個人頁面][28]
 
+## 和風信使 (taichunmin)
+
+目前任職於天匠數位娛樂有限公司，
+從高中因為社團接觸 ACM，然後大學開始自學 PHP。
+主要是後端工程師，前端略有涉略，美工超級不擅長，
+請大家多多指教。
+
 ## 本頁共筆
 本頁是使用Markdown語法編寫，並利用Github自動頁面產生器生成。若是想要增修本頁面內容，請到本頁面的 [Github Repo][24] 提出Pull Request，經過確認後就會merge進來。
 
@@ -175,3 +182,4 @@
   [31]: https://nchueecsec.hackpad.com/
   [32]: http://nchueecsec.kktix.cc/
   [33]: http://nightfeather.github.io/
+  [34]: http://taichunmin.idv.tw/
