@@ -117,7 +117,7 @@
 #### 西瓜 (PastLeo)
 和電腦有關的東西都有接觸過，目前在學生會擔任資訊部長，請多指教～
 
-- [About.me][23]
+- [pastleo.me][23]
 
 #### 堯堯 (baconYao)
 20屆資訊部長。資工系出身，但實力還是很弱的小魯蛇。
@@ -172,7 +172,7 @@
   [20]: https://www.facebook.com/groups/693883194008233/
   [21]: http://about.me/fntsrlike
   [22]: http://fntsr.childish.tw/
-  [23]: http://about.me/chiuguanyu
+  [23]: http://pastleo.me
   [24]: https://github.com/NCHUEECSeC/nchueecsec.github.io
   [25]: http://git-scm.com/book/zh
   [26]: https://help.github.com/articles/using-pull-requests
