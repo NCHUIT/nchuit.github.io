@@ -12,7 +12,18 @@
 本頁主要是彙集興大有關於電資相關的學生同好資訊，多是學生自發性學習與交流為主體，與興大系所開設課程無關。
 
 ## 快速導引
-詳細介紹請參考下方的**社群與平台**的資料。_依照成立時間排序_
+
+### 平台
+
+- [FaceBook 社團：NCHU EECSeC - 興大電資同好社群](https://www.facebook.com/groups/693883194008233/)
+- [Slack](https://nchueecsec.slack.com)
+- [HackPad](https://nchueecsec.hackpad.com/)
+- [Trello](https://trello.com/nchueecsec)
+- [KKTIX](http://nchueecsec.kktix.cc/)
+
+### 社群
+
+_依照成立時間排序_
 
 - [興大學生會資訊部][1]，以網頁開發相關技術為主，力主資訊流通與透明的組織。
 - [興大資訊社][2]，以推廣資訊課程為導向的社團，目前有Drupal、CPE、硬體等課程。
@@ -26,7 +37,6 @@
 1. [\[興資課\] JavaScript 引導入門][5]（2014/04/24）
 2. [DevOps #1：Linux 基本操作和管理][6]（2014/05/08）
 3. [DevOps #2：LAMP/LNMP 網站架設和管理][7]（2014/05/23）
-
 
 ### 定期活動與課程
 #### 資訊部
@@ -52,6 +62,14 @@
 - 禮拜六，一次 3 小時，Arduino & Scratch 入門應用與機電開發，時數 18 小時
 - 禮拜六，一次 3 小時，區域網站的架設管理與簡易防駭，時數 18 小時
 - 禮拜六，一次 3 小時，別人的電腦我來修 - 基礎班，時數 18 小時
+
+##### [103上資訊創意課程](https://nchueecsec.hackpad.com/collection/nfsDfarPxNW)
+
+##### [103下資訊活動](https://nchueecsec.hackpad.com/collection/zdYZhI3tbwj)
+
+ - ACM 程式競賽 讀書會
+ - 資訊創意課程 (下)
+ - 定期黑客松
 
 #### 興資會
 ##### 103學年度第一學期
