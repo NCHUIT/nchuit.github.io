@@ -1,0 +1,300 @@
+
+/* body */
+body {
+    /* margin: 0; */
+    /*background: black;*/
+    /*transition: all 1s;*/
+}
+
+/* font */
+body {
+  /*font-family: 'LiHei Pro','微軟正黑體';*/
+}
+.ui.header {
+  font-family: 'LiHei Pro','微軟正黑體';
+}
+
+/* frame */
+.frame.background{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+.frame.curtain{
+    position: relative;
+    z-index: 2;
+}
+
+/* section / footer */
+.masthead.section{
+    padding: 50px 0px;
+}
+.footer{
+    background: linear-gradient(to bottom,rgba(255, 255, 255, 0),rgba(255, 255, 255, 0), black);
+}
+
+/* space */
+.long.space{
+    height: 200px;
+}
+.short.space{
+    height: 70px;
+}
+.real.short.space{
+    height: 30px;
+}
+.real.long.space{
+    height: 600px;
+}
+.dark.space{
+    background:rgb(38, 38, 38);
+}
+
+/* splitter */
+.splitter {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+/* header */
+@media (min-width: 800px){
+    .ui.header.massive{
+        font-size: 3em;
+    }
+}
+@media (max-width: 800px){
+    .ui.header.massive{
+        font-size: 2.5em;
+    }
+}
+
+/* in-strip background */
+.with-background {
+   position: relative;
+}
+.with-background > .background {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: 10;
+}
+.with-background > .foreground {
+   position: absolute;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   z-index: 20;
+}
+
+/* misc */
+.centerized{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ui.hidable{
+    opacity: 1;
+    transition: opacity 1s;
+}
+.ui.hidable.hidden{
+    opacity: 0;
+}
+@media (min-width: 700px){
+    .viewport-height{
+        min-height: 100vh;
+    }
+}
+.viewport-height-force{
+   min-height: 100vh;
+}
+.text-center{
+    text-align: center;
+}
+.hashable.header, .hashable.label{
+    cursor:pointer;
+}
+.hashable.header:hover{
+    color:#00b2f3;
+}
+.hacked-as-tooltip {
+  border-radius: .28571429rem;
+}
+
+/* steps hacked to use as  */
+.ui.steps.hacked-as-tooltip .step {
+  border-radius: .28571429rem;
+}
+.ui.steps.hacked-as-tooltip .step:last-child {
+  display: none;
+}
+
+/* rwd */
+@media (min-width: 700px){
+    .visible.on.xs{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .visible.having.sm{
+        display: none;
+    }
+}
+
+@media (max-width: 700px){
+    .visible.on.sm{
+        display: none;
+    }
+}
+
+@media (min-width: 1050px){
+    .visible.on.sm{
+        display: none;
+    }
+}
+
+@media (max-width: 1050px){
+    .visible.on.md{
+        display: none;
+    }
+}
+
+@media (max-width: 1050px){
+    .visible.having.md{
+        display: none;
+    }
+}
+
+@media (min-width: 1050px){
+    .visible.no.md{
+        display: none;
+    }
+}
+
+@media (min-width: 1400px){
+    .visible.on.md{
+        display: none;
+    }
+}
+
+@media (max-width: 1400px){
+    .visible.on.lg{
+        display: none;
+    }
+}
+
+@media (min-width: 1400px){
+    .visible.no.lg{
+        display: none;
+    }
+}
+
+/* section customization */
+
+/* index / game */
+@keyframes game_bg {
+   from { background: #4646B5; } to { background: #8C46B5; }
+}
+#game {
+   /*animation: game_bg 5s linear 0s infinite alternate;*/
+   background: #4D4D4D;
+}
+#game > canvas {
+  position: absolute;
+  bottom: 0;
+}
+#brand_logo {
+   height: 90px;
+   width: auto;
+}
+@media (max-width: 768px) {
+   #brand_text {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+   }
+}
+#logo {
+   margin-top: 80px;
+}
+#logo .header {
+  /*color:black;
+  text-shadow: white 0px 0px 3px;
+  font-weight: bold;*/
+}
+
+.ui.intro-board {
+    max-width: 540px;
+}
+.ui.emphasis-border.segment  {
+    box-shadow: 0 5px 6px 0 rgba(34,36,38,0.52),0 7px 7px 0 rgba(34,36,38,0.28);
+    border: 1px solid rgba(34,36,38,0.6);
+}
+.ui.my_gray.segment {
+    background-color: rgb(10, 10, 10);
+}
+.ui.my_green.segment {
+    background-color: rgba(70, 166, 68, 0.86);
+    color green;
+}
+
+#splitter_0 {
+  height: 141px;
+  background: url("http://i.imgur.com/08o4btC.png");
+  background-size: auto 141px;
+  bottom: -40px;
+}
+
+#intro {
+  background: black;
+}
+.sec-header {
+  position: relative;
+  top: -25px;
+}
+
+#intro .header {
+  /*color: white;*/
+}
+#intro .act-tab {
+  height: 200px;
+  background-size: cover;
+}
+
+#activities .sec-header .segment {
+  border-top-width: 4px;
+}
+
+#activities .styled.accordion > .title{
+  height: 50px;
+  background-size: cover;
+}
+
+.img-bg.section {
+  background-size: cover;
+}
+.fix-bg.section {
+  background-attachment: fixed;
+}
+
+#newbie {
+  background-image: url("http://i.imgur.com/oigc4tD.jpg");
+}
+#acm {
+  background-image: url("http://i.imgur.com/BrfD2He.jpg");
+}
+
+#hacker {
+  background-image: url("http://i.imgur.com/0ayDG3f.jpg");
+}
+#the_game_text {
+  color: #00B5AD;
+}
+
+.ui.transparent.segment {
+  background: rgba(255, 255, 255, 0.85);
+}
