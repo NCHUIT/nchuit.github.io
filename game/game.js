@@ -53,6 +53,9 @@ var game = {
         this.diamond = diamond;
 
         this.jumping = 0;
+        player.animations.stop();
+        player.frame = 4;
+        this.game_started = false;
     },
     update: function(){
         var game = this.main;
@@ -67,6 +70,12 @@ var game = {
             if(player.body.aabb.collideAABBVsTile(tiles[i].tile)){
                 jumpable = true;
             }
+        }
+
+        if(!this.game_started) return;
+        if(player.top > 680){
+            this.game_started = false;
+            window.location.hash = "intro";
         }
 
         if (cursors.left.isDown)
@@ -99,11 +108,28 @@ var game = {
             player.body.moveUp(350);
             this.jumping--;
         }
+        console.log(player.top);
     }
 };
+
 
 jQuery(function(){
     var height = jQuery(window).height();
     if(height > 830) height = 830;
     game.main = new Phaser.Game(jQuery(window).width(), height, Phaser.AUTO, 'game', game, true);
+
+    var info_wrap = jQuery('.info-wrap');
+    var infos = info_wrap.find('.info');
+    function change_info(index){
+        infos.removeClass('active');
+        info_wrap.find('#' + index).addClass('active');
+    }
+
+    jQuery(document).keydown(function(e,a){
+        if(e.keyCode == 32){
+            change_info("haha");
+            game.game_started = true;
+            return false;
+        }
+    });
 });

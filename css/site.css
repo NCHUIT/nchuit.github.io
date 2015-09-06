@@ -256,13 +256,12 @@ body {
   position: relative;
   top: -25px;
 }
+.info-wrap .info:not(.active) {
+  display: none;
+}
 
 #intro .header {
   /*color: white;*/
-}
-#intro .act-tab {
-  height: 200px;
-  background-size: cover;
 }
 
 #activities .sec-header .segment {
