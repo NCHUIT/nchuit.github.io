@@ -1,0 +1,140 @@
+.animated { 
+    -webkit-animation-duration: 1s; 
+    animation-duration: 1s; 
+    -webkit-animation-fill-mode: both; 
+    animation-fill-mode: both; 
+} 
+
+@-webkit-keyframes bounceInRight { 
+    0% { 
+        opacity: 0; 
+        -webkit-transform: translateX(2000px); 
+    } 
+    60% { 
+        opacity: 1; 
+        -webkit-transform: translateX(-30px); 
+    } 
+    80% { 
+        -webkit-transform: translateX(10px); 
+    } 
+    100% { 
+        -webkit-transform: translateX(0); 
+    } 
+} 
+
+@keyframes bounceInRight { 
+    0% { 
+        opacity: 0; 
+        transform: translateX(2000px); 
+    } 
+    60% { 
+        opacity: 1; 
+        transform: translateX(-30px); 
+    } 
+    80% { 
+        transform: translateX(10px); 
+    } 
+    100% { 
+        transform: translateX(0); 
+    } 
+} 
+
+.bounceInRight { 
+    -webkit-animation-name: bounceInRight; 
+    animation-name: bounceInRight; 
+}
+
+@-webkit-keyframes wiggle { 
+    0% { -webkit-transform: skewX(9deg); } 
+    10% { -webkit-transform: skewX(-8deg); } 
+    20% { -webkit-transform: skewX(7deg); } 
+    30% { -webkit-transform: skewX(-6deg); } 
+    40% { -webkit-transform: skewX(5deg); } 
+    50% { -webkit-transform: skewX(-4deg); } 
+    60% { -webkit-transform: skewX(3deg); } 
+    70% { -webkit-transform: skewX(-2deg); } 
+    80% { -webkit-transform: skewX(1deg); } 
+    90% { -webkit-transform: skewX(0deg); } 
+    100% { -webkit-transform: skewX(0deg); } 
+} 
+@keyframes wiggle { 
+    0% { transform: skewX(9deg); } 
+    10% { transform: skewX(-8deg); } 
+    20% { transform: skewX(7deg); } 
+    30% { transform: skewX(-6deg); } 
+    40% { transform: skewX(5deg); } 
+    50% { transform: skewX(-4deg); } 
+    60% { transform: skewX(3deg); } 
+    70% { transform: skewX(-2deg); } 
+    80% { transform: skewX(1deg); } 
+    90% { transform: skewX(0deg); } 
+    100% { transform: skewX(0deg); } 
+} 
+.wiggle { 
+    -webkit-animation-name: wiggle; 
+    animation-name: wiggle; 
+    -webkit-animation-timing-function: ease-in; 
+    animation-timing-function: ease-in; 
+} 
+.animated.wiggle { 
+    -webkit-animation-duration: 0.75s; 
+    animation-duration: 0.75s; 
+}
+
+.modal {
+    top:50%;
+    left:50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+}
+
+.div-cat-img {
+    position: relative;
+}
+
+.div-cat-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%; 
+}
+.div-cat-mask>p {
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 190px;
+    color: red;
+}
+.game-page {
+    /*position: fixed;*/
+    width: 100%;
+    height: 100%;
+}
+.div-cat-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    z-index: -1;
+}
+.div-cat-background>p {
+    position: absolute;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-weight: bold;
+    font-size: 190px;
+    color: #FFD39B;
+}
+.num-click {
+    left: 51%;
+    top: 9%;
+    vertical-align: middle;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    font-size: 200px;
+    top: -8%;
+}
