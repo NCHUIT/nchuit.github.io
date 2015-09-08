@@ -1,4 +1,7 @@
 
+var info_wrap;
+var infos;
+var change_info;
 var game = {
 
     preload: function(){
@@ -55,13 +58,14 @@ var game = {
         this.jumping = 0;
         player.animations.stop();
         player.frame = 4;
-        this.game_started = false;
+        this.running = false;
     },
     update: function(){
         var game = this.main;
         var tiles = this.tiles;
         var player = this.player;
         var cursors = this.cursors;
+        var self = this;
 
         game.physics.ninja.collide(player, this.diamond);
         var jumpable = false;
@@ -69,13 +73,20 @@ var game = {
         {
             if(player.body.aabb.collideAABBVsTile(tiles[i].tile)){
                 jumpable = true;
+
             }
         }
 
-        if(!this.game_started) return;
+        if(!this.running) return;
         if(player.top > 680){
-            this.game_started = false;
-            window.location.hash = "intro";
+            this.running = false;
+            self.ended = true;
+            change_info('died');
+        }
+        else if(player.top == 71 && player.left > 1887 && player.left < 1930){
+            this.running = false;
+            self.ended = true;
+            change_info('win');
         }
 
         if (cursors.left.isDown)
@@ -108,7 +119,9 @@ var game = {
             player.body.moveUp(350);
             this.jumping--;
         }
-        console.log(player.top);
+
+        // console.log(player.top)
+        // console.log(player.left)
     }
 };
 
@@ -118,17 +131,24 @@ jQuery(function(){
     if(height > 830) height = 830;
     game.main = new Phaser.Game(jQuery(window).width(), height, Phaser.AUTO, 'game', game, true);
 
-    var info_wrap = jQuery('.info-wrap');
-    var infos = info_wrap.find('.info');
-    function change_info(index){
+    info_wrap = jQuery('.info-wrap');
+    infos = info_wrap.find('.info');
+    change_info = function(index){
         infos.removeClass('active');
         info_wrap.find('#' + index).addClass('active');
-    }
+    };
 
     jQuery(document).keydown(function(e,a){
         if(e.keyCode == 32){
-            change_info("haha");
-            game.game_started = true;
+            if(game.ended)
+                goto('#intro');
+            else if(!game.running){
+                change_info("howto");
+                game.running = true;
+            }
+            else{
+                change_info("hide");
+            }
             return false;
         }
     });

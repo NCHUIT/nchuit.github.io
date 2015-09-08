@@ -35,7 +35,7 @@ body {
 
 /* space */
 .long.space{
-    height: 200px;
+    height: 150px;
 }
 .short.space{
     height: 70px;
@@ -46,6 +46,10 @@ body {
 .real.long.space{
     height: 600px;
 }
+.quarter.space {
+  height: 25vh;
+}
+
 .dark.space{
     background:rgb(38, 38, 38);
 }
@@ -82,11 +86,11 @@ body {
    z-index: 10;
 }
 .with-background > .foreground {
-   position: absolute;
-   top: 0;
+   position: relative;
+   /*top: 0;
    left: 0;
    bottom: 0;
-   right: 0;
+   right: 0;*/
    z-index: 20;
 }
 
@@ -196,11 +200,7 @@ body {
 /* section customization */
 
 /* index / game */
-@keyframes game_bg {
-   from { background: #4646B5; } to { background: #8C46B5; }
-}
 #game {
-   /*animation: game_bg 5s linear 0s infinite alternate;*/
    background: #4D4D4D;
 }
 #game > canvas {
@@ -219,12 +219,9 @@ body {
    }
 }
 #logo {
-   margin-top: 80px;
+  height: 100vh;
 }
 #logo .header {
-  /*color:black;
-  text-shadow: white 0px 0px 3px;
-  font-weight: bold;*/
 }
 
 .ui.intro-board {
@@ -261,7 +258,6 @@ body {
 }
 
 #intro .header {
-  /*color: white;*/
 }
 
 #activities .sec-header .segment {
@@ -296,4 +292,13 @@ body {
 
 .ui.transparent.segment {
   background: rgba(255, 255, 255, 0.85);
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.spining {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
 }
