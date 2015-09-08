@@ -48,13 +48,6 @@ var game = {
         game.camera.follow(player);
         this.player = player;
 
-        //  Pushable object
-        var diamond = game.add.sprite(200, game.world.height - 150, 'diamond');
-        game.physics.ninja.enable(diamond);
-        diamond.body.collideWorldBounds = true;
-        diamond.body.bounce = 0.5;
-        this.diamond = diamond;
-
         this.jumping = 0;
         player.animations.stop();
         player.frame = 4;
@@ -75,7 +68,11 @@ var game = {
                 jumpable = true;
 
             }
+            if(this.diamond)
+                this.diamond.body.aabb.collideAABBVsTile(tiles[i].tile);
         }
+        if(this.diamond)
+            game.physics.ninja.collide(player, this.diamond);
 
         if(!this.running) return;
         if(player.top > 680){
@@ -83,10 +80,20 @@ var game = {
             self.ended = true;
             change_info('died');
         }
+        else if(player.left > 2240 && !this.diamond){
+            //  Pushable object
+            var diamond = game.add.sprite(2300, 0, 'diamond');
+            game.physics.ninja.enable(diamond);
+            diamond.body.collideWorldBounds = true;
+            diamond.body.bounce = 0.5;
+            this.diamond = diamond;
+        }
         else if(player.top == 71 && player.left > 1887 && player.left < 1930){
             this.running = false;
             self.ended = true;
             change_info('win');
+            var seconds_used = ((new Date()).getTime() - this.start_time);
+            jQuery('#time_used').text((seconds_used/1000) + " Seconds Used");
         }
 
         if (cursors.left.isDown)
@@ -145,6 +152,7 @@ jQuery(function(){
             else if(!game.running){
                 change_info("howto");
                 game.running = true;
+                game.start_time = (new Date()).getTime();
             }
             else{
                 change_info("hide");
