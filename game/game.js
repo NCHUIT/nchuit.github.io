@@ -91,9 +91,11 @@ var game = {
         else if(player.top == 71 && player.left > 1887 && player.left < 1930){
             this.running = false;
             self.ended = true;
+            
             change_info('win');
             var seconds_used = ((new Date()).getTime() - this.start_time);
-            jQuery('#time_used').text((seconds_used/1000) + " Seconds Used");
+            self.win_sec = seconds_used/1000;
+            jQuery('#time_used').text((self.win_sec) + " Seconds Used");
         }
 
         if (cursors.left.isDown)
@@ -144,11 +146,16 @@ jQuery(function(){
         infos.removeClass('active');
         info_wrap.find('#' + index).addClass('active');
     };
-
+    var recorded = true;
     jQuery(document).keydown(function(e,a){
         if(e.keyCode == 32){
             if(game.ended)
-                goto('#intro');
+                if(recorded) {
+                    Record.getRecord(game.win_sec);
+                    recorded = false;
+                }
+                else
+                    goto('#intro');
             else if(!game.running){
                 change_info("howto");
                 game.running = true;
@@ -158,6 +165,16 @@ jQuery(function(){
                 change_info("hide");
             }
             return false;
+        }
+    });
+
+    $('#record-break #name').on('keydown',function(e) {
+        if(e.keyCode == 13) {
+            var name = $('#record-break #name').val();
+            var record = game.win_sec;
+            delete game.win_sec;
+            Record.refreshFlag = true;
+            Record.breakRecord(name, record);
         }
     });
 });
