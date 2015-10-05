@@ -289,7 +289,21 @@ body {
 #the_game_text {
   color: #00B5AD;
 }
-
+#the_fb_text {
+  color: #3A5897;
+}
+.ui.white-text.list>.item a.header, .ui.white-text.list>.item a {
+  color: #C5E2FF!important;
+}
+.ui.white-text.list>.item a.header:hover, .ui.white-text.list>.item a:hover {
+  color: white!important;
+}
+.ui.white-text.list>.item .description {
+  color: white;
+}
+.ui.fb.segment {
+  background: #3A5897;
+}
 .ui.transparent.segment {
   background: rgba(255, 255, 255, 0.85);
 }
@@ -301,4 +315,28 @@ body {
   -webkit-animation:spin 4s linear infinite;
   -moz-animation:spin 4s linear infinite;
   animation:spin 4s linear infinite;
+}
+
+
+.fb-side-330px-580px-container {
+  position: relative;
+  min-height: 580px;
+}
+.fb-side-330px-580px-container .fb-right {
+  text-align: center;
+}
+.fb-page.fb_iframe_widget {
+  border: #3A5897 solid 5px;
+  border-radius: 5px;
+}
+
+@media (min-width: 700px){
+  .fb-side-330px-580px-container .fb-left {
+    margin-right: 280px;
+  }
+  .fb-side-330px-580px-container .fb-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

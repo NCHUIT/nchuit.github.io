@@ -9,6 +9,14 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
 </head>
 <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <div id="index" class="viewport-height section with-background">
         <div id="game" class="background"></div>
         <div id="logo" class="viewport-height foreground">
@@ -115,33 +123,61 @@
     <div id="intro" class="section">
         <div class="short space"></div>
         <div class="ui container">
-            <div class="ui one steps hacked-as-tooltip">
-                <div class="active step">
-                    <h2 id="the_game_text" class="ui center aligned header">哇，上面的遊戲是怎麼做的！？</h2>
+            <div class="fb-side-330px-580px-container">
+                <div class="fb-left">
+                    <div class="ui one steps hacked-as-tooltip">
+                        <div class="active step">
+                            <h2 id="the_game_text" class="ui center aligned header">哇，上面的遊戲是怎麼做的！？</h2>
+                        </div>
+                        <div class="active step" style="display:none;">
+                        </div>
+                    </div>
+                    <div class="ui inverted fb segment">
+                        <h2 class="ui center aligned header">如果你有這樣的想法，加入資訊社就對了！</h2>
+                        <h3 class="ui center aligned header">我們的目標是推廣興大的資訊風氣，使興大有更多能夠了解並且使用資訊科技的同學們，並且能夠透過本社團互相交流、取暖(?)</h3>
+                    </div>
+                    <div class="ui one steps hacked-as-tooltip">
+                        <div class="active step">
+                            <h2 id="the_fb_text" class="ui center aligned header">
+                                如果你對我們有興趣，請在粉專上面按個讚，我們會不定期有資訊講座，還有一些有趣(XX) 的資訊新聞分享，才不會錯過喔！
+                            </h2>
+                        </div>
+                        <div class="active step" style="display:none;">
+                        </div>
+                    </div>
+                    <div class="ui inverted teal segment">
+                        <h3 class="ui center aligned header">
+                            對了這邊還有更多我們製作的小東西...
+                        </h3>
+                        <div class="ui relaxed divided white-text list">
+                            <div class="item">
+                                <i class="large pointing down middle aligned icon"></i>
+                                <div class="content">
+                                    <a class="header" target="_blank" href="http://nchuit.cc/clickclick/">ClickClick</a>
+                                    <div class="description">就是一個狂按遊戲，<a target="_blank" href="https://github.com/NCHUIT/clickclick">Github Repo</a></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="large flag outline middle aligned icon"></i>
+                                <div class="content">
+                                    <a class="header" target="_blank" href="#index">Marity</a>
+                                    <div class="description">其實就是這個首頁最上面的遊戲，<a target="_blank" href="https://github.com/NCHUIT/nchuit2015marity">記分板 Github Repo</a></div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <i class="large github middle aligned icon"></i>
+                                <div class="content">
+                                    <a class="header" target="_blank" href="https://github.com/NCHUIT">我們的 Github 組織上有其他沒填好的坑</a>
+                                    <div class="description"> ლ(・´ｪ`・ლ)</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="active step" style="display:none;">
+                <div class="short space visible on xs"></div>
+                <div class="fb-right">
+                    <div class="fb-page" data-href="https://www.facebook.com/it.nchu" data-width="330" data-height="580" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/it.nchu"><a href="https://www.facebook.com/it.nchu">中興大學 - 資訊科學研習社</a></blockquote></div></div>
                 </div>
-            </div>
-            <div class="ui inverted teal segment">
-                <h2 class="ui center aligned header">如果你有這樣的想法，加入資訊社就對了！</h2>
-                <h3 class="ui center aligned header">我們的目標是推廣興大的資訊風氣，使興大有更多能夠了解並且使用資訊科技的同學們，並且能夠透過本社團互相交流、取暖(?)</h3>
-                <h4 class="ui center aligned header">
-                    對了這邊還有更多遊戲...
-                    <a href="http://nchuit.github.io/clickclick/" target="_blank" class="ui inverted violet basic button">狂按吧！</a>
-                </h4>
-            </div>
-            <div class="ui inverted pink segment">
-                <h2 class="ui center aligned header">迎新</h2>
-                <p>
-                想進一步認識我們，了解我們的活動的同學們，歡迎來參加我們的迎新，我們會詳細說明所有的活動
-                </p>
-                <p>
-                時間：9/17 18:30 - 21:00
-                </p>
-                <p>
-                地點：理學大樓 702A
-                </p>
-                <a href="http://goo.gl/forms/R8Qmb57zcY" target="_blank" class="ui inverted yellow basic button">來看看！有吃吃喝喝！</a>
             </div>
         </div>
         <div class="short space"></div>
@@ -158,6 +194,12 @@
             </div>
             <div class="six wide column"></div>
         </div>
+        <div class="ui container">
+            <div class="ui inverted pink segment">
+                <h2 class="ui center aligned header">我們這學期有三個每個禮拜都會進行的活動：ACM 程式競賽分享會、社課、開工計畫，歡迎加入我們！</h2>
+            </div>
+        </div>
+        <div class="short space"></div>
         <div class="ui activity-cards three column page grid">
             <div class="column">
                 <div class="ui fluid card">
@@ -172,12 +214,12 @@
                         <img src="http://i.imgur.com/m6PFP58.jpg">
                     </div>
                     <div class="content">
-                        <h2 class="ui center aligned header">給身為新手的你</h2>
+                        <h2 class="ui center aligned header">社課</h2>
                     </div>
                 </div>
             </div>
             <div class="column">
-                <div class="ui  fluid card">
+                <div class="ui fluid card">
                     <div class="blurring dimmable image">
                         <div class="ui dimmer">
                             <div class="content">
@@ -209,6 +251,18 @@
                         <h2 class="ui center aligned header">開工計畫</h2>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="short space"></div>
+        <div class="ui container">
+            <div class="ui inverted segment">
+                <h2>
+                    若想參與社課、開工計畫，請填寫加入資訊社表單：<a href="http://goo.gl/forms/bYiuHKODRM">http://goo.gl/forms/bYiuHKODRM</a>
+                </h2>
+                <h3>
+                    ACM 程式競賽報名表單：<a href="http://goo.gl/forms/FtjHAJ2421">http://goo.gl/forms/FtjHAJ2421</a>
+                </h3>
+                <h4>雖然活動已經開始，我們還是歡迎任何有興趣的人隨時加入！</h4>
             </div>
         </div>
         <div class="short space"></div>
