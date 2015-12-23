@@ -1,0 +1,50 @@
+/*Keyframes*/
+@keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-moz-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+@-webkit-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 50% {background-color:#b4cfe0;}
+ 100% {background-position: 500px 1000px, 400px 400px, 300px 300px; background-color:#6b92b9;}
+}
+
+@-ms-keyframes snow {
+0% {background-position: 0px 0px, 0px 0px, 0px 0px;}
+ 100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
+}
+
+.snow-frame {
+	-webkit-animation: snow 20s linear infinite;
+	-moz-animation: snow 20s linear infinite;
+	-ms-animation: snow 20s linear infinite;
+	animation: snow 20s linear infinite;
+
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 10;
+}
+
+.front.snow-frame {
+	background-image: url('../img/snow.png');
+	position: fixed;
+	z-index: 18;
+}
+
+.middle.snow-frame {
+	background-image: url('../img/snow3.png');
+}
+
+.back.snow-frame {
+	background-image: url('../img/snow2.png');
+	z-index: 5;
+}

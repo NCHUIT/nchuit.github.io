@@ -59,6 +59,7 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
+  z-index: 15
 }
 
 /* header */
@@ -200,7 +201,7 @@ body {
 /* section customization */
 
 /* index / game */
-#game {
+#index {
    background: #4D4D4D;
 }
 #game > canvas {
