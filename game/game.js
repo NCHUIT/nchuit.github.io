@@ -91,7 +91,7 @@ var game = {
         else if(player.top == 71 && player.left > 1887 && player.left < 1930){
             this.running = false;
             self.ended = true;
-            
+
             change_info('win');
             var seconds_used = ((new Date()).getTime() - this.start_time);
             self.win_sec = seconds_used/1000;
@@ -136,6 +136,13 @@ var game = {
 
 
 jQuery(function(){
+    var width = jQuery(window).width();
+    if(width > 700) {
+        jQuery("#mobile_game_fallback").hide();
+    }
+    else {
+        return;
+    }
     var height = jQuery(window).height();
     if(height > 830) height = 830;
     game.main = new Phaser.Game(jQuery(window).width(), height, Phaser.AUTO, 'game', game, true);

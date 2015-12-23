@@ -43,6 +43,9 @@ body {
 .real.short.space{
     height: 30px;
 }
+.quite.long.space{
+    height: 400px;
+}
 .real.long.space{
     height: 600px;
 }
@@ -112,9 +115,6 @@ body {
     .viewport-height{
         min-height: 100vh;
     }
-}
-.viewport-height-force{
-   min-height: 100vh;
 }
 .text-center{
     text-align: center;
@@ -204,6 +204,11 @@ body {
 #index {
    background: #4D4D4D;
 }
+#mobile_game_fallback {
+  background: url("../game/mobile_game_fallback.png");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+}
 #game > canvas {
   position: absolute;
   bottom: 0;
@@ -218,9 +223,6 @@ body {
       margin-left: auto;
       margin-right: auto;
    }
-}
-#logo {
-  height: 100vh;
 }
 #logo .header {
 }
