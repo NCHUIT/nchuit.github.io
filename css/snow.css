@@ -38,6 +38,7 @@
 	background-image: url('../img/snow.png');
 	position: fixed;
 	z-index: 18;
+	pointer-events: none;
 }
 
 .middle.snow-frame {
