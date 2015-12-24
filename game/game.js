@@ -14,6 +14,11 @@ var characters = [
         width: 35,
         height: 69
     },
+    {
+        spritesheet: "game/chistpenguin.png",
+        width: 35,
+        height: 69
+    },
 ]
 
 var game = {
