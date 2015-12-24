@@ -2,6 +2,20 @@
 var info_wrap;
 var infos;
 var change_info;
+
+var characters = [
+    {
+        spritesheet: "game/pastleo.png",
+        width: 35,
+        height: 69
+    },
+    {
+        spritesheet: "game/penguin.png",
+        width: 35,
+        height: 69
+    },
+]
+
 var game = {
 
     preload: function(){
@@ -9,7 +23,9 @@ var game = {
         // game.load.image('sky', '{% static "game/sky1.png" %}');
         game.load.tilemap('map', 'game/ninja-tilemap.json', null, Phaser.Tilemap.TILED_JSON);
         game.load.image('kenney', 'tiles/kenney.png');
-        game.load.spritesheet('dude', 'game/pastleo.png', 35, 69);
+
+        var dude = characters[Math.floor(Math.random() * characters.length)];
+        game.load.spritesheet('dude', dude.spritesheet, dude.width, dude.height);
         game.load.image('diamond', 'game/diamond.png');
     },
     create: function(){
