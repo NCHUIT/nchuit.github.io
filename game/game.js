@@ -191,13 +191,14 @@ jQuery(function(){
         }
     });
 
-    $('#record-break #name').on('keydown',function(e) {
+    $('#record-break #name, #record-break #text').on('keydown',function(e) {
         if(e.keyCode == 13) {
             var name = $('#record-break #name').val();
+            var text = $('#record-break #text').val();
             var record = game.win_sec;
             delete game.win_sec;
             Record.refreshFlag = true;
-            Record.breakRecord(name, record);
+            Record.breakRecord(name, record, text);
         }
     });
 });

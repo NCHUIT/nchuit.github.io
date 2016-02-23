@@ -1,14 +1,15 @@
-function Record(name, record, rank) {
+function Record(name, record, rank, text) {
     this.name = name;
     this.record = record;
+    this.text= text;
     this.rank = rank;
 };
-Record.server = 'http://rureta.me:1337/';
+Record.server = 'http://localhost:3000/';
 Record.model = 'record/';
 Record.record_list = [];
 Record.getRecord = function(win_sec) {
     change_info("record");
-    var query = 'findFirstFive/';
+    var query = 'list/';
     jQuery.ajax({
         url: Record.server + Record.model + query,
     })
@@ -16,7 +17,7 @@ Record.getRecord = function(win_sec) {
         self.record_list = [];
         for (var i in data) {
             var rec = data[i];
-            self.record_list.push(new Record(rec.name, rec.record, parseInt(i)+1));
+            self.record_list.push(new Record(rec.name, rec.record, parseInt(i)+1, rec.text));
         }
         if ((!Record.refreshFlag &&
             typeof win_sec !== 'undefined' &&
@@ -28,8 +29,14 @@ Record.getRecord = function(win_sec) {
         }
         else {
             for(var i in self.record_list) {
-            var record = self.record_list[i];
-            jQuery('#record-list').append(record.as_('p'));
+                var record = self.record_list[i];
+                jQuery('#record-list').append(record.as_('p'));
+                jQuery('#record-list #' + record.rank).popup({
+                    title: record.name,
+                    content: record.text,
+                    hoverable: true,
+                    position : 'top center',
+                })
             }
             jQuery('#record-list #loader').removeClass('active');
         }
@@ -44,13 +51,15 @@ Record.getRecord = function(win_sec) {
         console.log("complete");
     });
 };
-Record.breakRecord = function(name, record) {
-    var query = 'create/';
+Record.breakRecord = function(name, record, text) {
+    var query = 'new/';
     jQuery.ajax({
+        method: 'post',
         url: Record.server + Record.model + query,
         data: {
             name: name,
             record: record,
+            text: text,
         },
     })
     .done(function() {
@@ -70,7 +79,7 @@ Record.prototype = {
             '<'+header+'>'+
             this.rank+'. '+this.name+' '+this.record+'s'+
             '</'+header+'>'
-                ).addClass('ui center aligned header');
+                ).addClass('ui center aligned header').attr('id', this.rank).css({cursor: 'pointer'});
     },
 }
 
