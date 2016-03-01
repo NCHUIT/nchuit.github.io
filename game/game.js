@@ -153,52 +153,53 @@ var game = {
 
 jQuery(function(){
     var width = jQuery(window).width();
-    if(width > 700) {
-        jQuery("#mobile_game_fallback").hide();
-    }
-    else {
-        return;
+    if(width < 700) {
+        return ;
     }
     var height = jQuery(window).height();
     if(height > 830) height = 830;
-    game.main = new Phaser.Game(jQuery(window).width(), height, Phaser.AUTO, 'game', game, true);
+    $('#gameLoadBtn').click(function() {
+        jQuery("#mobile_game_fallback").hide();
+        game.main = new Phaser.Game(jQuery(window).width(), height, Phaser.AUTO, 'game', game, true);
 
-    info_wrap = jQuery('.info-wrap');
-    infos = info_wrap.find('.info');
-    change_info = function(index){
-        infos.removeClass('active');
-        info_wrap.find('#' + index).addClass('active');
-    };
-    var recorded = true;
-    jQuery(document).keydown(function(e,a){
-        if(e.keyCode == 32){
-            if(game.ended)
-                if(recorded) {
-                    Record.getRecord(game.win_sec);
-                    recorded = false;
+        info_wrap = jQuery('.info-wrap');
+        infos = info_wrap.find('.info');
+        change_info = function(index){
+            infos.removeClass('active');
+            info_wrap.find('#' + index).addClass('active');
+        };
+        change_info("howto");
+        var recorded = true;
+        jQuery(document).keydown(function(e,a){
+            if(e.keyCode == 32){
+                if(game.ended)
+                    if(recorded) {
+                        Record.getRecord(game.win_sec);
+                        recorded = false;
+                    }
+                    else
+                        goto('#intro');
+                else if(!game.running){
+                    change_info("ready");
+                    game.running = true;
+                    game.start_time = (new Date()).getTime();
                 }
-                else
-                    goto('#intro');
-            else if(!game.running){
-                change_info("howto");
-                game.running = true;
-                game.start_time = (new Date()).getTime();
+                else{
+                    change_info("hide");
+                }
+                return false;
             }
-            else{
-                change_info("hide");
-            }
-            return false;
-        }
-    });
+        });
 
-    $('#record-break #name, #record-break #text').on('keydown',function(e) {
-        if(e.keyCode == 13) {
-            var name = $('#record-break #name').val();
-            var text = $('#record-break #text').val();
-            var record = game.win_sec;
-            delete game.win_sec;
-            Record.refreshFlag = true;
-            Record.breakRecord(name, record, text);
-        }
-    });
+        $('#record-break #name, #record-break #text').on('keydown',function(e) {
+            if(e.keyCode == 13) {
+                var name = $('#record-break #name').val();
+                var text = $('#record-break #text').val();
+                var record = game.win_sec;
+                delete game.win_sec;
+                Record.refreshFlag = true;
+                Record.breakRecord(name, record, text);
+            }
+        });
+    })
 });
