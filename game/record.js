@@ -4,7 +4,7 @@ function Record(name, record, rank, text) {
     this.text= text;
     this.rank = rank;
 };
-Record.server = 'http://localhost:3000/';
+Record.server = 'http://marity_record.nchuit.cc';
 Record.model = 'record/';
 Record.record_list = [];
 Record.getRecord = function(win_sec) {
