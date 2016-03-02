@@ -4,7 +4,7 @@ function Record(name, record, rank, text) {
     this.text= text;
     this.rank = rank;
 };
-Record.server = 'http://marity_record.nchuit.cc';
+Record.server = 'http://marity_record.nchuit.cc/';
 Record.model = 'record/';
 Record.record_list = [];
 Record.getRecord = function(win_sec) {
@@ -17,7 +17,7 @@ Record.getRecord = function(win_sec) {
         self.record_list = [];
         for (var i in data) {
             var rec = data[i];
-            self.record_list.push(new Record(rec.name, rec.record, parseInt(i)+1, rec.text));
+            self.record_list.push(new Record(rec.name, rec.time, parseInt(i)+1, rec.text));
         }
         if ((!Record.refreshFlag &&
             typeof win_sec !== 'undefined' &&
@@ -48,7 +48,7 @@ Record.getRecord = function(win_sec) {
         console.log("error",e);
     })
     .always(function() {
-        console.log("complete");
+        // console.log("complete");
     });
 };
 Record.breakRecord = function(name, record, text) {
@@ -58,7 +58,7 @@ Record.breakRecord = function(name, record, text) {
         url: Record.server + Record.model + query,
         data: {
             name: name,
-            record: record,
+            time: record,
             text: text,
         },
     })
@@ -69,9 +69,9 @@ Record.breakRecord = function(name, record, text) {
         console.log("error",e);
     })
     .always(function() {
-        console.log("complete");
+        // console.log("complete");
     });
-    
+
 };
 Record.prototype = {
     as_: function(header) {
