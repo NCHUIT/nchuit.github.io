@@ -353,3 +353,7 @@ body {
     right: 0;
   }
 }
+
+.ui.transparent-bg.embed {
+  background: rgba(0, 0, 0, 0);
+}
