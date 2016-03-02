@@ -21,6 +21,10 @@ function goto(hash){ // hash need to be begun with '#'
 
 jQuery(document).ready(function($) {
     jQuery('.ui.accordion').accordion();
+    $('.ui.embed').embed();
+    setTimeout(function(){
+        $('.ui.embed').children().trigger("click");
+    },500)
     jQuery('.activity-cards .card .dimmable.image').dimmer({on: 'hover'});
 
     $('a[href*=#]:not([href=#])').click(function() {

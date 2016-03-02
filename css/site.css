@@ -295,6 +295,12 @@ body {
 #the_fb_text {
   color: #3A5897;
 }
+#join {
+  background: black;
+}
+#works {
+  background-image: url("http://i.imgur.com/zpOmT7M.jpg");
+}
 .ui.white-text.list>.item a.header, .ui.white-text.list>.item a {
   color: #C5E2FF!important;
 }
@@ -318,6 +324,10 @@ body {
   -webkit-animation:spin 4s linear infinite;
   -moz-animation:spin 4s linear infinite;
   animation:spin 4s linear infinite;
+}
+.spining.gif {
+  margin-top: 22px;
+  margin-bottom: 16px;
 }
 
 
