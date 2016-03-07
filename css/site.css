@@ -290,7 +290,7 @@ body {
   background-image: url("http://i.imgur.com/0ayDG3f.jpg");
 }
 #the_game_text {
-  color: #00B5AD;
+  color: #469944;
 }
 #the_fb_text {
   color: #3A5897;
@@ -309,9 +309,6 @@ body {
 }
 .ui.white-text.list>.item .description {
   color: white;
-}
-.ui.fb.segment {
-  background: #3A5897;
 }
 .ui.transparent.segment {
   background: rgba(255, 255, 255, 0.85);
