@@ -4,21 +4,19 @@ function Record(name, record, rank, text) {
     this.text= text;
     this.rank = rank;
 };
-Record.server = 'http://marity_record.nchuit.cc/';
-Record.model = 'record/';
+Record.server = 'https://marity_record.nchuit.cc';
+Record.model = 'record';
 Record.record_list = [];
 Record.getRecord = function(win_sec) {
     change_info("record");
-    var query = 'list/';
+    var query = 'list';
     jQuery.ajax({
-        url: Record.server + Record.model + query,
+        method: 'get',
+        url: `${Record.server}/${Record.model}/${query}`,
     })
-    .done(function(data) {
-        self.record_list = [];
-        for (var i in data) {
-            var rec = data[i];
-            self.record_list.push(new Record(rec.name, rec.time, parseInt(i)+1, rec.text));
-        }
+    .done(function(response) {
+        var recordList = response;
+        self.record_list = recordList.map((record, i) => new Record(record.name, record.time, i+1, record.text));
         if ((!Record.refreshFlag &&
             typeof win_sec !== 'undefined' &&
             ( self.record_list.length<5 ||
@@ -52,10 +50,10 @@ Record.getRecord = function(win_sec) {
     });
 };
 Record.breakRecord = function(name, record, text) {
-    var query = 'new/';
+    var query = 'new';
     jQuery.ajax({
         method: 'post',
-        url: Record.server + Record.model + query,
+        url: `${Record.server}/${Record.model}/${query}`,
         data: {
             name: name,
             time: record,
