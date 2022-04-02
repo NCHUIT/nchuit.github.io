@@ -2,582 +2,581 @@
 <html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="國立中興大學資訊科學研習社官方網站">
-	<meta property="og:image" content="https://i.imgur.com/cWwOx0N.png"/>
-	<title>中興大學資訊社 NCHUIT</title>
-	<link rel="shortcut icon" href="https://i.imgur.com/sQVQhdk.png"/>
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-	<link rel="stylesheet" href="css/site.css?5">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="國立中興大學資訊科學研習社官方網站">
+  <meta property="og:image" content="https://i.imgur.com/cWwOx0N.png" />
+  <title>中興大學資訊社 NCHUIT</title>
+  <link rel="shortcut icon" href="https://i.imgur.com/sQVQhdk.png" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="css/site.css?5">
 </head>
 
 <body>
-	<div id="fb-root"></div>
-	<script>(function (d, s, id) {
-			var js, fjs = d.getElementsByTagName(s)[0];
-			if (d.getElementById(id)) return;
-			js = d.createElement(s); js.id = id;
-			js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4";
-			fjs.parentNode.insertBefore(js, fjs);
-		}(document, 'script', 'facebook-jssdk'));</script>
-	<div id="index" class="viewport-height section with-background">
-		<div id="mobile_game_fallback" class="background"></div>
-		<div id="game" class="background"></div>
-		<div id="logo" class="viewport-height foreground">
-			<div class="ui centerized intro-board">
-				<div class="visible on xs real short space"></div>
-				<div class="visible on sm short space"></div>
-				<div class="visible having md quarter space"></div>
-				<div class="info-wrap">
-					<div id="brand" class="active info">
-						<div class="ui emphasis-border my_gray inverted segment">
-							<div class="ui stackable grid">
-								<div class="column">
-									<img id="brand_text" class="ui centerized medium image"
-										src="https://i.imgur.com/3CqcxHQ.png"/>
-								</div>
-							</div>
-							<div class="ui list">
-								<a class="fluid purple ui button" target="_blank" href="https://forms.gle/bghmKYxjc9v7m9WE8">
-									110-2 活動報名/簽到防疫表單
-								</a>
-							</div>
-							<div class="ui list">
-								<a class="fluid purple ui button" target="_blank" href="http://reurl.cc/VjYNGZ">
-									110-2 活動回饋單/貓貓磁扣購買意願調查
-								</a>
-							</div>
-							<div class="ui list">
-								<a class="fluid purple ui button" target="_blank" href="https://reurl.cc/Q65ADM">
-									110 行事曆(有迎新簡報和教材連接喔!)
-								</a>
-							</div>
-							<h4 class="ui center aligned header">其實這是中興資訊社官網，如果你沒發現的話</h4>
-						</div>
-						<div class="ui emphasis-border my_green inverted segment">
-							<h3 class="ui center aligned header"><span class="visible having sm"><button
-										id="gameLoadBtn" class="ui primary button">開始遊戲</button> 或 </span>往下捲動了解我們</h3>
-							<h5 class="ui center aligned header"><span class="visible having sm">Press the blue button
-									to join the game, or </span>Scroll down to know more about us.</h5>
-						</div>
-					</div>
-					<div id="howto" class="info">
-						<div class="ui emphasis-border my_gray inverted segment">
-							<h4 class="ui center aligned header">使用鍵盤 上、下、左、右 控制角色</h4>
-							<h4 class="ui center aligned header">Use up, down, left, right key to control the character
-							</h4>
-						</div>
-						<div class="ui emphasis-border my_green inverted segment">
-							<h3 class="ui center aligned header"><span class="visible having sm">按下空白鍵開始</h3>
-							<h5 class="ui center aligned header"><span class="visible having sm">Press space key to
-									continue</h5>
-						</div>
-					</div>
-					<div id="ready" class="info">
-						<div class="ui emphasis-border my_gray inverted segment">
-							<h4 class="ui center aligned header">準備</h4>
-							<h4 class="ui center aligned header">Ready</h4>
-						</div>
-						<div class="ui emphasis-border my_green inverted segment">
-							<h3 class="ui center aligned header"><span class="visible having sm">按下空白鍵開始</h3>
-							<h5 class="ui center aligned header"><span class="visible having sm">Press space key to
-									continue</h5>
-						</div>
-					</div>
-					<div id="died" class="info">
-						<div class="ui emphasis-border my_gray inverted segment">
-							<div class="ui one column stackable grid">
-								<div class="column">
-									<img id="brand_logo" class="ui centerized medium image"
-										src="http://i.imgur.com/SSSWhXx.png" style="transform: rotateZ(180deg);"/>
-								</div>
-							</div>
-							<h4 class="ui center aligned header">你死了，你掉下去了</h4>
-							<h4 class="ui center aligned header">You died</h4>
-						</div>
-						<div class="ui emphasis-border my_green inverted segment">
-							<h3 class="ui center aligned header">往下捲動了解我們吧</h3>
-							<h5 class="ui center aligned header">Scroll down to know more about us.</h5>
-						</div>
-					</div>
-					<div id="win" class="info">
-						<div class="ui emphasis-border my_gray inverted segment">
-							<div class="ui one column stackable grid">
-								<div class="column">
-									<img id="brand_logo" class="ui centerized medium spining image"
-										src="http://i.imgur.com/SSSWhXx.png"/>
-								</div>
-							</div>
-							<h4 class="ui center aligned header">耶！你贏了！</h4>
-							<h4 class="ui center aligned header">You win!</h4>
-							<h2 id="time_used" class="ui center aligned header"></h2>
-						</div>
-						<div class="ui emphasis-border my_green inverted segment">
-							<h3 class="ui center aligned header">請往下捲動了解我們！</h3>
-							<h5 class="ui center aligned header">Please scroll down to know more about us!</h5>
-						</div>
-					</div>
-					<div id="record" class="info">
-						<div class="ui emphasis-border my_gray inverted segment">
-							<div class="ui one column stackable grid">
-								<div class="column">
-									<img id="brand_logo" class="ui centerized medium image"
-										src="https://media.giphy.com/media/HreknDhcZmGoE/giphy.gif"/>
-								</div>
-							</div>
-							<h2 id="time_used" class="ui center aligned header"></h2>
-						</div>
-						<div class="ui emphasis-border my_green inverted segment" id="record-list">
-							<div class="ui active inverted dimmer" id="loader">
-								<div class="ui text loader">Prepare Ranking...</div>
-							</div>
-						</div>
-					</div>
-					<div id="break_record" class="info">
-						<div class="ui emphasis-border my_gray inverted segment">
-							<div class="ui one column stackable grid">
-								<div class="column">
-									<img id="brand_logo" class="ui centerized medium spining gif image"
-										src="https://media.giphy.com/media/HreknDhcZmGoE/giphy.gif"/>
-								</div>
-							</div>
-							<h2 class="ui center aligned header">Congraduation!</h2>
-							<h4 class="ui center aligned header">You break new record!</h4>
-						</div>
-						<div class="ui emphasis-border my_green inverted segment" id="record-break">
-							<h4 class="ui center aligned header">Enter Your name:</h4>
-							<div class="ui input focus" style="width:100%">
-								<input type="text" placeholder="Enter" id="name">
-								<input type="text" placeholder="Something To Say" id="text">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="visible on xs quite long space"></div>
-		<div id="splitter_0" class="splitter"></div>
-	</div>
-	<div id="intro" class="section">
-		<div class="short space"></div>
-		<div class="ui container">
-			<div class="fb-side-330px-580px-container">
-				<div class="fb-left">
-					<div class="ui one steps hacked-as-tooltip">
-						<div class="active step">
-							<h2 id="the_game_text" class="ui center aligned header">哇，上面的遊戲是怎麼做的！？</h2>
-						</div>
-						<div class="active step" style="display:none;">
-						</div>
-					</div>
-					<div class="ui inverted segment">
-						<h2 class="ui center aligned header">如果你有這樣的想法，加入資訊社就對了！</h2>
-						<h3 class="ui center aligned header">我們的目標是推廣興大的資訊風氣，使興大有更多能夠了解並且使用資訊科技的同學們，並且能夠透過本社團互相交流、取暖(?)
-						</h3>
-					</div>
-					<div class="ui one steps hacked-as-tooltip">
-						<div class="active step">
-							<h2 id="the_fb_text" class="ui center aligned header">
-								如果你對我們有興趣，請在粉專上面按個讚，我們會不定期有資訊講座，還有一些有趣(XX) 的資訊新聞分享，才不會錯過喔！
-							</h2>
-						</div>
-						<div class="active step" style="display:none;">
-						</div>
-					</div>
-					<div class="ui inverted segment">
-						<h2 class="ui center aligned header">繼續往下捲，<br class="visible no lg"/>我們還有很多活動以及東東(?)喔</h2>
-						<h3 class="ui center aligned header">如果你已經心動想參與我們的活動，<br class="visible no lg"/>請點選這個按鈕：</h3>
-						<a href="https://reurl.cc/q1keqn" class="fluid massive green ui button"
-							target="_blank">入社表單</a>
-					</div>
-				</div>
-				<div class="short space visible on xs"></div>
-				<div class="fb-right">
-					<div class="fb-page" data-href="https://www.facebook.com/it.nchu" data-width="330" data-height="580"
-						data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
-						data-show-facepile="true" data-show-posts="true">
-						<div class="fb-xfbml-parse-ignore">
-							<blockquote cite="https://www.facebook.com/it.nchu"><a
-									href="https://www.facebook.com/it.nchu">中興大學 - 資訊科學研習社</a></blockquote>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="short space"></div>
-	</div>
-	<div id="activities" class="section">
-		<div class="ui stackable grid sec-header">
-			<div class="six wide column"></div>
-			<div class="four wide column">
-				<div class="ui pink segment">
-					<h3 class="ui center aligned header">
-						我們的活動
-					</h3>
-				</div>
-			</div>
-			<div class="six wide column"></div>
-		</div>
-		<div class="ui container">
-			<div class="ui inverted pink segment">
-				<h2 class="ui center aligned header">我們的定期活動：</h2>
-			</div>
-		</div>
-		<div class="short space"></div>
-		<div class="ui activity-cards three column page grid">
-			<div class="column">
-				<div class="ui fluid card">
-					<div class="blurring dimmable image">
-						<div class="ui dimmer">
-							<div class="content">
-								<div class="center">
-									<a href="#newbie" class="ui inverted button">活動訊息</a>
-								</div>
-							</div>
-						</div>
-						<img src="http://i.imgur.com/m6PFP58.jpg">
-					</div>
-					<div class="content">
-						<h2 class="ui center aligned header">
-							<!--社課-->
-							程式分享會
-						</h2>
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui fluid card">
-					<div class="blurring dimmable image">
-						<div class="ui dimmer">
-							<div class="content">
-								<div class="center">
-									<a href="#acm" class="ui inverted button">活動訊息</a>
-								</div>
-							</div>
-						</div>
-						<img src="http://i.imgur.com/HUW3bWj.jpg">
-					</div>
-					<div class="content">
-						<h2 class="ui center aligned header">
-							<!--程式解題競賽分享會-->
-							主題工作坊
-						</h2>
-					</div>
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui fluid card">
-					<div class="blurring dimmable image">
-						<div class="ui dimmer">
-							<div class="content">
-								<div class="center">
-									<a href="#hacker" class="ui inverted button">活動訊息</a>
-								</div>
-							</div>
-						</div>
-						<img src="http://i.imgur.com/kbyIwBY.jpg">
-					</div>
-					<div class="content">
-						<h2 class="ui center aligned header">開工計畫</h2>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="short space"></div>
-		<div class="ui container">
-			<div class="ui inverted pink segment">
-				<h2 class="ui center aligned header">也有不定期活動，反正都在行事曆上啦：</h2>
-			</div>
-		</div>
-		<div class="short space"></div>
-		<div class="ui container">
-			<div class="ui inverted segment">
-				<div class="ui embed transparent-bg"
-					data-url="https://calendar.google.com/calendar/embed?src=it.nchu%40gmail.com"
-					data-placeholder="http://i.imgur.com/vNGy1Mm.png">
-				</div>
-			</div>
-		</div>
-		<div class="short space"></div>
-		<div class="ui container">
-			<div class="ui inverted segment">
-				<div class="embed"><iframe
-						src="https://docs.google.com/document/d/e/2PACX-1vSYX1b_B2puD5CHKTXcC_R1169Oe3nL4B5E8yJoZa5pDNbNIeX-XaVnAwGcOWftDg/pub?embedded=true"
-						width="100%" height="650" frameborder="0" webkitallowfullscreen mozallowfullscreen
-						allowfullscreen></iframe></div>
-			</div>
-		</div>
-	</div>
-	<div id="newbie" class="viewport-height img-bg fix-bg section">
-		<div class="long space"></div>
-		<div class="ui container">
-			<div class="ui transparent segment">
-				<h2 class="ui header">
-					<img class="ui circular image" src="http://i.imgur.com/m6PFP58.jpg" alt/>
-					<!-- 社課 -->
-					程式分享會
-				</h2>
-				<h4>
-					我們的核心課程，如果你對寫程式還是新手，來參加這個活動就對了！<!-- 我們會教你從 Web 進入這個世界，同時也有很多相關工具的教學～
+  <div id="fb-root"></div>
+  <script>(function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.4";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+  <div id="index" class="viewport-height section with-background">
+    <div id="mobile_game_fallback" class="background"></div>
+    <div id="game" class="background"></div>
+    <div id="logo" class="viewport-height foreground">
+      <div class="ui centerized intro-board">
+        <div class="visible on xs real short space"></div>
+        <div class="visible on sm short space"></div>
+        <div class="visible having md quarter space"></div>
+        <div class="info-wrap">
+          <div id="brand" class="active info">
+            <div class="ui emphasis-border my_gray inverted segment">
+              <div class="ui stackable grid">
+                <div class="column">
+                  <img id="brand_text" class="ui centerized medium image" src="https://i.imgur.com/3CqcxHQ.png" />
+                </div>
+              </div>
+              <div class="ui list">
+                <a class="fluid purple ui button" target="_blank" href="https://forms.gle/bghmKYxjc9v7m9WE8">
+                  110-2 活動報名/簽到防疫表單
+                </a>
+              </div>
+              <div class="ui list">
+                <a class="fluid purple ui button" target="_blank" href="http://reurl.cc/VjYNGZ">
+                  110-2 活動回饋單/貓貓磁扣購買意願調查
+                </a>
+              </div>
+              <div class="ui list">
+                <a class="fluid purple ui button" target="_blank" href="https://reurl.cc/Q65ADM">
+                  110 行事曆(有迎新簡報和教材連接喔!)
+                </a>
+              </div>
+              <h4 class="ui center aligned header">其實這是中興資訊社官網，如果你沒發現的話</h4>
+            </div>
+            <div class="ui emphasis-border my_green inverted segment">
+              <h3 class="ui center aligned header"><span class="visible having sm"><button id="gameLoadBtn"
+                    class="ui primary button">開始遊戲</button> 或 </span>往下捲動了解我們</h3>
+              <h5 class="ui center aligned header"><span class="visible having sm">Press the blue button
+                  to join the game, or </span>Scroll down to know more about us.</h5>
+            </div>
+          </div>
+          <div id="howto" class="info">
+            <div class="ui emphasis-border my_gray inverted segment">
+              <h4 class="ui center aligned header">使用鍵盤 上、下、左、右 控制角色</h4>
+              <h4 class="ui center aligned header">Use up, down, left, right key to control the character
+              </h4>
+            </div>
+            <div class="ui emphasis-border my_green inverted segment">
+              <h3 class="ui center aligned header"><span class="visible having sm">按下空白鍵開始</h3>
+              <h5 class="ui center aligned header"><span class="visible having sm">Press space key to
+                  continue</h5>
+            </div>
+          </div>
+          <div id="ready" class="info">
+            <div class="ui emphasis-border my_gray inverted segment">
+              <h4 class="ui center aligned header">準備</h4>
+              <h4 class="ui center aligned header">Ready</h4>
+            </div>
+            <div class="ui emphasis-border my_green inverted segment">
+              <h3 class="ui center aligned header"><span class="visible having sm">按下空白鍵開始</h3>
+              <h5 class="ui center aligned header"><span class="visible having sm">Press space key to
+                  continue</h5>
+            </div>
+          </div>
+          <div id="died" class="info">
+            <div class="ui emphasis-border my_gray inverted segment">
+              <div class="ui one column stackable grid">
+                <div class="column">
+                  <img id="brand_logo" class="ui centerized medium image" src="http://i.imgur.com/SSSWhXx.png"
+                    style="transform: rotateZ(180deg);" />
+                </div>
+              </div>
+              <h4 class="ui center aligned header">你死了，你掉下去了</h4>
+              <h4 class="ui center aligned header">You died</h4>
+            </div>
+            <div class="ui emphasis-border my_green inverted segment">
+              <h3 class="ui center aligned header">往下捲動了解我們吧</h3>
+              <h5 class="ui center aligned header">Scroll down to know more about us.</h5>
+            </div>
+          </div>
+          <div id="win" class="info">
+            <div class="ui emphasis-border my_gray inverted segment">
+              <div class="ui one column stackable grid">
+                <div class="column">
+                  <img id="brand_logo" class="ui centerized medium spining image"
+                    src="http://i.imgur.com/SSSWhXx.png" />
+                </div>
+              </div>
+              <h4 class="ui center aligned header">耶！你贏了！</h4>
+              <h4 class="ui center aligned header">You win!</h4>
+              <h2 id="time_used" class="ui center aligned header"></h2>
+            </div>
+            <div class="ui emphasis-border my_green inverted segment">
+              <h3 class="ui center aligned header">請往下捲動了解我們！</h3>
+              <h5 class="ui center aligned header">Please scroll down to know more about us!</h5>
+            </div>
+          </div>
+          <div id="record" class="info">
+            <div class="ui emphasis-border my_gray inverted segment">
+              <div class="ui one column stackable grid">
+                <div class="column">
+                  <img id="brand_logo" class="ui centerized medium image"
+                    src="https://media.giphy.com/media/HreknDhcZmGoE/giphy.gif" />
+                </div>
+              </div>
+              <h2 id="time_used" class="ui center aligned header"></h2>
+            </div>
+            <div class="ui emphasis-border my_green inverted segment" id="record-list">
+              <div class="ui active inverted dimmer" id="loader">
+                <div class="ui text loader">Prepare Ranking...</div>
+              </div>
+            </div>
+          </div>
+          <div id="break_record" class="info">
+            <div class="ui emphasis-border my_gray inverted segment">
+              <div class="ui one column stackable grid">
+                <div class="column">
+                  <img id="brand_logo" class="ui centerized medium spining gif image"
+                    src="https://media.giphy.com/media/HreknDhcZmGoE/giphy.gif" />
+                </div>
+              </div>
+              <h2 class="ui center aligned header">Congraduation!</h2>
+              <h4 class="ui center aligned header">You break new record!</h4>
+            </div>
+            <div class="ui emphasis-border my_green inverted segment" id="record-break">
+              <h4 class="ui center aligned header">Enter Your name:</h4>
+              <div class="ui input focus" style="width:100%">
+                <input type="text" placeholder="Enter" id="name">
+                <input type="text" placeholder="Something To Say" id="text">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="visible on xs quite long space"></div>
+    <div id="splitter_0" class="splitter"></div>
+  </div>
+  <div id="intro" class="section">
+    <div class="short space"></div>
+    <div class="ui container">
+      <div class="fb-side-330px-580px-container">
+        <div class="fb-left">
+          <div class="ui one steps hacked-as-tooltip">
+            <div class="active step">
+              <h2 id="the_game_text" class="ui center aligned header">哇，上面的遊戲是怎麼做的！？</h2>
+            </div>
+            <div class="active step" style="display:none;">
+            </div>
+          </div>
+          <div class="ui inverted segment">
+            <h2 class="ui center aligned header">如果你有這樣的想法，加入資訊社就對了！</h2>
+            <h3 class="ui center aligned header">我們的目標是推廣興大的資訊風氣，使興大有更多能夠了解並且使用資訊科技的同學們，並且能夠透過本社團互相交流、取暖(?)
+            </h3>
+          </div>
+          <div class="ui one steps hacked-as-tooltip">
+            <div class="active step">
+              <h2 id="the_fb_text" class="ui center aligned header">
+                如果你對我們有興趣，請在粉專上面按個讚，我們會不定期有資訊講座，還有一些有趣(XX) 的資訊新聞分享，才不會錯過喔！
+              </h2>
+            </div>
+            <div class="active step" style="display:none;">
+            </div>
+          </div>
+          <div class="ui inverted segment">
+            <h2 class="ui center aligned header">繼續往下捲，<br class="visible no lg" />我們還有很多活動以及東東(?)喔</h2>
+            <h3 class="ui center aligned header">如果你已經心動想參與我們的活動，<br class="visible no lg" />請點選這個按鈕：</h3>
+            <a href="https://reurl.cc/q1keqn" class="fluid massive green ui button" target="_blank">入社表單</a>
+          </div>
+        </div>
+        <div class="short space visible on xs"></div>
+        <div class="fb-right">
+          <div class="fb-page" data-href="https://www.facebook.com/it.nchu" data-width="330" data-height="580"
+            data-small-header="false" data-adapt-container-width="true" data-hide-cover="false"
+            data-show-facepile="true" data-show-posts="true">
+            <div class="fb-xfbml-parse-ignore">
+              <blockquote cite="https://www.facebook.com/it.nchu"><a href="https://www.facebook.com/it.nchu">中興大學 -
+                  資訊科學研習社</a></blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="short space"></div>
+  </div>
+  <div id="activities" class="section">
+    <div class="ui stackable grid sec-header">
+      <div class="six wide column"></div>
+      <div class="four wide column">
+        <div class="ui pink segment">
+          <h3 class="ui center aligned header">
+            我們的活動
+          </h3>
+        </div>
+      </div>
+      <div class="six wide column"></div>
+    </div>
+    <div class="ui container">
+      <div class="ui inverted pink segment">
+        <h2 class="ui center aligned header">我們的定期活動：</h2>
+      </div>
+    </div>
+    <div class="short space"></div>
+    <div class="ui activity-cards three column page grid">
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="blurring dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="#newbie" class="ui inverted button">活動訊息</a>
+                </div>
+              </div>
+            </div>
+            <img src="http://i.imgur.com/m6PFP58.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui center aligned header">
+              <!--社課-->
+              程式分享會
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="blurring dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="#acm" class="ui inverted button">活動訊息</a>
+                </div>
+              </div>
+            </div>
+            <img src="http://i.imgur.com/HUW3bWj.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui center aligned header">
+              <!--程式解題競賽分享會-->
+              主題工作坊
+            </h2>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="ui fluid card">
+          <div class="blurring dimmable image">
+            <div class="ui dimmer">
+              <div class="content">
+                <div class="center">
+                  <a href="#hacker" class="ui inverted button">活動訊息</a>
+                </div>
+              </div>
+            </div>
+            <img src="http://i.imgur.com/kbyIwBY.jpg">
+          </div>
+          <div class="content">
+            <h2 class="ui center aligned header">開工計畫</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="short space"></div>
+    <div class="ui container">
+      <div class="ui inverted pink segment">
+        <h2 class="ui center aligned header">也有不定期活動，反正都在行事曆上啦：</h2>
+      </div>
+    </div>
+    <div class="short space"></div>
+    <div class="ui container">
+      <div class="ui inverted segment">
+        <div class="ui embed transparent-bg"
+          data-url="https://calendar.google.com/calendar/embed?src=it.nchu%40gmail.com"
+          data-placeholder="http://i.imgur.com/vNGy1Mm.png">
+        </div>
+      </div>
+    </div>
+    <div class="short space"></div>
+    <div class="ui container">
+      <div class="ui inverted segment">
+        <div class="embed"><iframe
+            src="https://docs.google.com/document/d/e/2PACX-1vSYX1b_B2puD5CHKTXcC_R1169Oe3nL4B5E8yJoZa5pDNbNIeX-XaVnAwGcOWftDg/pub?embedded=true"
+            width="100%" height="650" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="newbie" class="viewport-height img-bg fix-bg section">
+    <div class="long space"></div>
+    <div class="ui container">
+      <div class="ui transparent segment">
+        <h2 class="ui header">
+          <img class="ui circular image" src="http://i.imgur.com/m6PFP58.jpg" alt />
+          <!-- 社課 -->
+          程式分享會
+        </h2>
+        <h4>
+          我們的核心課程，如果你對寫程式還是新手，來參加這個活動就對了！
+          <!-- 我們會教你從 Web 進入這個世界，同時也有很多相關工具的教學～
                     <br/>
                     如果你已經寫過程式，我們的課程都是現在很酷炫的技術，你會發現這東西玩起來是很有趣的！ -->
-				</h4>
-				<h4>
-					時間：每週三 18:20 - 21:00
-				</h4>
-				<h4>
-					地點：理學大樓 821 教室
-				</h4>
-			</div>
-		</div>
-		<div class="short space"></div>
-		<div class="ui container">
-			<div class="ui transparent segment">
-				<h2 class="ui header">
-					看看以前上了啥課程：
-				</h2>
-				<ul class="ui list">
-					<li><a href="https://docs.google.com/spreadsheets/d/1gUCVgFdX5Adf5gpJ8acpVIhWWyu15c6tHDQQxKgtOTQ"
-							target="_blank">我們的投影片集中營</a></li>
-					<li><a href="https://hackmd.io/@NCHUIT" target="_blank">HackMD</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="long space"></div>
-	</div>
-	<div id="acm" class="viewport-height img-bg section">
-		<div class="long space"></div>
-		<div class="ui container">
-			<div class="ui transparent segment">
-				<h2 class="ui header">
-					<img class="ui circular image" src="http://i.imgur.com/HUW3bWj.jpg" alt/>
-					<!-- 程式競賽分享會 -->
-					主題工作坊
-				</h2>
-				<h4>
-					<!-- 如果你對於程式解題競賽有興趣，參與本活動的同學們會在這裡分享各種演算法以及解題技巧，最後組隊出去比賽！ -->
-					讓畢業的學長姐以及專業的學生來告訴你一些實用的資訊技能！
-				</h4>
-				<h4>
-					時間：每週一 18:20 - 21:00 <b><u>3/28 和 4/25 為 19:00 - 22:00</u></b>
-				</h4>
-				<h4>
-					地點：理學大樓 821 教室
-				</h4>
-			</div>
-		</div>
-		<div class="short space"></div>
-		<div class="ui container">
-			<div class="ui transparent segment">
-				<h2 class="ui header">
-					<!-- 參加的比賽 -->
-					這學期的請學長姐來講的課
-				</h2>
-				<ul class="ui list">
-					<!-- <li><a href="https://cpe.cse.nsysu.edu.tw/" target="_blank">CPE</a></li>
+        </h4>
+        <h4>
+          時間：每週三 18:20 - 21:00
+        </h4>
+        <h4>
+          地點：理學大樓 821 教室
+        </h4>
+      </div>
+    </div>
+    <div class="short space"></div>
+    <div class="ui container">
+      <div class="ui transparent segment">
+        <h2 class="ui header">
+          看看以前上了啥課程：
+        </h2>
+        <ul class="ui list">
+          <li><a href="https://docs.google.com/spreadsheets/d/1gUCVgFdX5Adf5gpJ8acpVIhWWyu15c6tHDQQxKgtOTQ"
+              target="_blank">我們的投影片集中營</a></li>
+          <li><a href="https://hackmd.io/@NCHUIT" target="_blank">HackMD</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="long space"></div>
+  </div>
+  <div id="acm" class="viewport-height img-bg section">
+    <div class="long space"></div>
+    <div class="ui container">
+      <div class="ui transparent segment">
+        <h2 class="ui header">
+          <img class="ui circular image" src="http://i.imgur.com/HUW3bWj.jpg" alt />
+          <!-- 程式競賽分享會 -->
+          主題工作坊
+        </h2>
+        <h4>
+          <!-- 如果你對於程式解題競賽有興趣，參與本活動的同學們會在這裡分享各種演算法以及解題技巧，最後組隊出去比賽！ -->
+          讓畢業的學長姐以及專業的學生來告訴你一些實用的資訊技能！
+        </h4>
+        <h4>
+          時間：每週一 18:20 - 21:00 <b><u>3/28 和 4/25 為 19:00 - 22:00</u></b>
+        </h4>
+        <h4>
+          地點：理學大樓 821 教室
+        </h4>
+      </div>
+    </div>
+    <div class="short space"></div>
+    <div class="ui container">
+      <div class="ui transparent segment">
+        <h2 class="ui header">
+          <!-- 參加的比賽 -->
+          這學期的請學長姐來講的課
+        </h2>
+        <ul class="ui list">
+          <!-- <li><a href="https://cpe.cse.nsysu.edu.tw/" target="_blank">CPE</a></li>
                     <li><a href="https://sites.google.com/site/itsancku/" target="_blank">ITSA</a></li> -->
-					<li><a herf="https://docs.google.com/document/d/1ay1mNMsWhfXsaRAUA7HImndjfTObCh8m"
-							target="_blank">3/14 Pixel Art × Processing</a></li>
-					<li><a href="https://hackmd.io/k4mVkI8ATRSe67GR8H5VCQ" target="_blank">3/28 RFID</a></li>
-					<li><a href="https://drive.google.com/file/d/1RcYACZLg4c_jGrqk_Sm_BrSEjJqaLluC" target="_blank">4/25
-							密室逃脫</a></li>
-					<li><a href="https://drive.google.com/file/d/1zvqw0_ftyh_6zujFo4Nv8ylLdfIgA5B7" target="_blank">5/9
-							LINE Beacon</a></li>
-					<li><a href="https://drive.google.com/file/d/1zvqw0_ftyh_6zujFo4Nv8ylLdfIgA5B7" target="_blank">5/16
-							DialogFlow</a></li>
-				</ul>
-				<!-- <a href="http://taichunmin.idv.tw/zj_rank_nchueecsec_103_2.html" target="_blank" class="ui orange basic button">我們的解題紀錄</a> -->
-			</div>
-		</div>
-		<div class="long space"></div>
-	</div>
-	<div id="hacker" class="viewport-height img-bg fix-bg section">
-		<div class="long space"></div>
-		<div class="ui container">
-			<div class="ui transparent segment">
-				<h2 class="ui header">
-					<img class="ui circular image" src="http://i.imgur.com/kbyIwBY.jpg" alt/>
-					開工計畫
-				</h2>
-				<h4>
-					如果你身懷絕技，想直接來參加專案製作，或者想來觀摩體驗專案製作的氛圍，我們會聚集大家整天在個地方好好寫 Code，可以是你跟你的 team 一起做的專案，也可以是你的作業，這裏會有大大跟大家一起
-					coding，更可以來這裡挖你自己的坑！
-				</h4>
-				<h4>
-					時間：每週六 13:30 - 21:00
-				</h4>
-				<h4>
-					地點：社辦
-				</h4>
-			</div>
-		</div>
-		<div class="short space"></div>
-		<div class="ui container">
-			<div class="ui transparent segment">
-				<h2 class="ui header">
-					一起來做些有趣的事情吧！
-				</h2>
-				<ul class="ui list">
-					<li><a href="http://david30907d.github.io/CoursePickingHelper/index.html" target="_blank">排課小幫手</a>
-					</li>
-					<li><a href="https://colab.research.google.com/drive/1YU18W7jFONbzNR4N-Dbn4-OpCx9G3fiz"
-							target="_blank">中興大學選課程式</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="long space"></div>
-	</div>
-	<div id="works" class="viewport-height img-bg section">
-		<div class="ui stackable grid sec-header">
-			<div class="six wide column"></div>
-			<div class="four wide column">
-				<div class="ui teal segment">
-					<h3 class="ui center aligned header">
-						我們的作品
-					</h3>
-				</div>
-			</div>
-			<div class="six wide column"></div>
-		</div>
-		<div class="long space"></div>
-		<div class="ui container">
-			<div class="ui inverted teal segment">
-				<h3 class="ui center aligned header">
-					這邊還有更多我們製作的小東西...
-				</h3>
-				<div class="ui relaxed divided white-text list">
-					<div class="item">
-						<i class="large pointing down middle aligned icon"></i>
-						<div class="content">
-							<a class="header" target="_blank" href="http://nchuit.cc/clickclick">ClickClick</a>
-							<div class="description">就是一個狂按遊戲，<a target="_blank"
-									href="https://github.com/NCHUIT/clickclick">Github Repo</a></div>
-						</div>
-					</div>
-					<div class="item">
-						<i class="large spy middle aligned icon"></i>
-						<div class="content">
-							<a class="header" target="_blank" href="https://nchuit.cc/talktalk">TalkTalk</a>
-							<div class="description">就是一個聊天室，很簡單，Hackable，<a target="_blank"
-									href="https://github.com/NCHUIT/talktalk">Github Repo</a></div>
-						</div>
-					</div>
-					<div class="item">
-						<i class="large flag outline middle aligned icon"></i>
-						<div class="content">
-							<a class="header" target="_blank" href="#index">Marity</a>
-							<div class="description">其實就是這個首頁最上面的遊戲，<a target="_blank"
-									href="https://github.com/NCHUIT/nchuitGameRecord">記分板 Github Repo</a></div>
-						</div>
-					</div>
-					<div class="item">
-						<i class="large game middle aligned icon"></i>
-						<div class="content">
-							<a class="header" target="_blank" href="http://nchuit.cc/Nchu2016EsportSite/">2016
-								興大電競清流盃網站</a>
-							<div class="description">是來上課的學弟妹們寫出來的喔！<a target="_blank"
-									href="https://github.com/NCHUIT/Nchu2016EsportSite">Github Repo</a></div>
-						</div>
-					</div>
-					<div class="item">
-						<i class="large github middle aligned icon"></i>
-						<div class="content">
-							<a class="header" target="_blank" href="https://github.com/NCHUIT">我們的 GitHub
-								組織上有其他沒填好的坑</a>
-							<div class="description"> ლ(・´ｪ`・ლ)</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="long space"></div>
-	</div>
-	<div id="contact" class="section">
-		<div class="ui stackable grid sec-header">
-			<div class="six wide column"></div>
-			<div class="four wide column">
-				<div class="ui green segment">
-					<h3 class="ui center aligned header">
-						聯絡我們
-					</h3>
-				</div>
-			</div>
-			<div class="six wide column"></div>
-		</div>
-		<div class="ui five column stackable page grid">
-			<div class="column">
-				<a href="https://www.facebook.com/it.nchu" target="_blank">
-					<h2 class="ui icon blue center aligned header">
-						<i class="facebook icon"></i>
-						<div class="content">
-							FB 粉專
-						</div>
-					</h2>
-				</a>
-			</div>
-			<div class="column">
-				<a href="https://www.instagram.com/it.nchu" target="_blank">
-					<h2 class="ui icon pink center aligned header">
-						<i class="instagram icon"></i>
-						<div class="content">
-							Instagram
-						</div>
-					</h2>
-				</a>
-			</div>
-			<div class="column">
-				<a href="https://line.me/R/ti/g/CqghLLhtLs">
-					<h2 class="ui icon green center aligned header">
-						<i class="linechat icon"></i>
-						<div class="content">
-							LINE 群組
-						</div>
-					</h2>
-				</a>
-			</div>
-			<div class="column">
-				<a href="https://goo.gl/maps/tEr4T3oMddGhyjAr5">
-					<h2 class="ui icon red center aligned header">
-						<i class="map marker alternate icon"></i>
-						<div class="content">
-							社辦: 雲平樓 313
-						</div>
-					</h2>
-				</a>
-			</div>
-			<div class="column">
-				<a href="mailto:it.nchu@gmail.com" target="_blank">
-					<h2 class="ui icon grey center aligned header">
-						<i class="mail icon"></i>
-						<div class="content">
-							Email
-						</div>
-					</h2>
-				</a>
-			</div>
-		</div>
-	</div>
-	<div class="ui inverted vertical footer segment">
-		<div class="ui center aligned container">
-			<div class="ui stackable grid">
-				<div class="three wide column">
-					<div class="ui inverted link list">
-						<a class="item" href="https://ppt.cc/fA9uAx" target="_blank" title="點我看組織章程">© 2022 NCHUIT, Club</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<script charset="utf-8" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-	<script charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script>
-	<script charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-	<script charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore-min.js"></script>
-	<script charset="utf-8" src="js/site.js?1"></script>
-	<script charset="utf-8" src="js/phaser.2.4.3.min.js"></script>
-	<script charset="utf-8" src="game/record.js?3"></script>
-	<script charset="utf-8" src="game/game.js?1"></script>
-	<script>(function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-67273442-1', 'auto'); ga('send', 'pageview');</script>
+          <li><a herf="https://docs.google.com/document/d/1ay1mNMsWhfXsaRAUA7HImndjfTObCh8m" target="_blank">3/14 Pixel
+              Art × Processing</a></li>
+          <li><a href="https://hackmd.io/k4mVkI8ATRSe67GR8H5VCQ" target="_blank">3/28 RFID</a></li>
+          <li><a href="https://drive.google.com/file/d/1RcYACZLg4c_jGrqk_Sm_BrSEjJqaLluC" target="_blank">4/25
+              密室逃脫</a></li>
+          <li><a href="https://drive.google.com/file/d/1zvqw0_ftyh_6zujFo4Nv8ylLdfIgA5B7" target="_blank">5/9
+              LINE Beacon</a></li>
+          <li><a href="https://drive.google.com/file/d/1zvqw0_ftyh_6zujFo4Nv8ylLdfIgA5B7" target="_blank">5/16
+              DialogFlow</a></li>
+        </ul>
+        <!-- <a href="http://taichunmin.idv.tw/zj_rank_nchueecsec_103_2.html" target="_blank" class="ui orange basic button">我們的解題紀錄</a> -->
+      </div>
+    </div>
+    <div class="long space"></div>
+  </div>
+  <div id="hacker" class="viewport-height img-bg fix-bg section">
+    <div class="long space"></div>
+    <div class="ui container">
+      <div class="ui transparent segment">
+        <h2 class="ui header">
+          <img class="ui circular image" src="http://i.imgur.com/kbyIwBY.jpg" alt />
+          開工計畫
+        </h2>
+        <h4>
+          如果你身懷絕技，想直接來參加專案製作，或者想來觀摩體驗專案製作的氛圍，我們會聚集大家整天在個地方好好寫 Code，可以是你跟你的 team 一起做的專案，也可以是你的作業，這裏會有大大跟大家一起
+          coding，更可以來這裡挖你自己的坑！
+        </h4>
+        <h4>
+          時間：每週六 13:30 - 21:00
+        </h4>
+        <h4>
+          地點：社辦
+        </h4>
+      </div>
+    </div>
+    <div class="short space"></div>
+    <div class="ui container">
+      <div class="ui transparent segment">
+        <h2 class="ui header">
+          一起來做些有趣的事情吧！
+        </h2>
+        <ul class="ui list">
+          <li><a href="http://david30907d.github.io/CoursePickingHelper/index.html" target="_blank">排課小幫手</a>
+          </li>
+          <li><a href="https://colab.research.google.com/drive/1YU18W7jFONbzNR4N-Dbn4-OpCx9G3fiz"
+              target="_blank">中興大學選課程式</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="long space"></div>
+  </div>
+  <div id="works" class="viewport-height img-bg section">
+    <div class="ui stackable grid sec-header">
+      <div class="six wide column"></div>
+      <div class="four wide column">
+        <div class="ui teal segment">
+          <h3 class="ui center aligned header">
+            我們的作品
+          </h3>
+        </div>
+      </div>
+      <div class="six wide column"></div>
+    </div>
+    <div class="long space"></div>
+    <div class="ui container">
+      <div class="ui inverted teal segment">
+        <h3 class="ui center aligned header">
+          這邊還有更多我們製作的小東西...
+        </h3>
+        <div class="ui relaxed divided white-text list">
+          <div class="item">
+            <i class="large pointing down middle aligned icon"></i>
+            <div class="content">
+              <a class="header" target="_blank" href="http://nchuit.cc/clickclick">ClickClick</a>
+              <div class="description">就是一個狂按遊戲，<a target="_blank" href="https://github.com/NCHUIT/clickclick">Github
+                  Repo</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <i class="large spy middle aligned icon"></i>
+            <div class="content">
+              <a class="header" target="_blank" href="https://nchuit.cc/talktalk">TalkTalk</a>
+              <div class="description">就是一個聊天室，很簡單，Hackable，<a target="_blank"
+                  href="https://github.com/NCHUIT/talktalk">Github Repo</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <i class="large flag outline middle aligned icon"></i>
+            <div class="content">
+              <a class="header" target="_blank" href="#index">Marity</a>
+              <div class="description">其實就是這個首頁最上面的遊戲，<a target="_blank"
+                  href="https://github.com/NCHUIT/nchuitGameRecord">記分板 Github Repo</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <i class="large game middle aligned icon"></i>
+            <div class="content">
+              <a class="header" target="_blank" href="http://nchuit.cc/Nchu2016EsportSite/">2016
+                興大電競清流盃網站</a>
+              <div class="description">是來上課的學弟妹們寫出來的喔！<a target="_blank"
+                  href="https://github.com/NCHUIT/Nchu2016EsportSite">Github Repo</a></div>
+            </div>
+          </div>
+          <div class="item">
+            <i class="large github middle aligned icon"></i>
+            <div class="content">
+              <a class="header" target="_blank" href="https://github.com/NCHUIT">我們的 GitHub
+                組織上有其他沒填好的坑</a>
+              <div class="description"> ლ(・´ｪ`・ლ)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="long space"></div>
+  </div>
+  <div id="contact" class="section">
+    <div class="ui stackable grid sec-header">
+      <div class="six wide column"></div>
+      <div class="four wide column">
+        <div class="ui green segment">
+          <h3 class="ui center aligned header">
+            聯絡我們
+          </h3>
+        </div>
+      </div>
+      <div class="six wide column"></div>
+    </div>
+    <div class="ui five column stackable page grid">
+      <div class="column">
+        <a href="https://www.facebook.com/it.nchu" target="_blank">
+          <h2 class="ui icon blue center aligned header">
+            <i class="facebook icon"></i>
+            <div class="content">
+              FB 粉專
+            </div>
+          </h2>
+        </a>
+      </div>
+      <div class="column">
+        <a href="https://www.instagram.com/it.nchu" target="_blank">
+          <h2 class="ui icon pink center aligned header">
+            <i class="instagram icon"></i>
+            <div class="content">
+              Instagram
+            </div>
+          </h2>
+        </a>
+      </div>
+      <div class="column">
+        <a href="https://line.me/R/ti/g/CqghLLhtLs">
+          <h2 class="ui icon green center aligned header">
+            <i class="linechat icon"></i>
+            <div class="content">
+              LINE 群組
+            </div>
+          </h2>
+        </a>
+      </div>
+      <div class="column">
+        <a href="https://goo.gl/maps/tEr4T3oMddGhyjAr5">
+          <h2 class="ui icon red center aligned header">
+            <i class="map marker alternate icon"></i>
+            <div class="content">
+              社辦: 雲平樓 313
+            </div>
+          </h2>
+        </a>
+      </div>
+      <div class="column">
+        <a href="mailto:it.nchu@gmail.com" target="_blank">
+          <h2 class="ui icon grey center aligned header">
+            <i class="mail icon"></i>
+            <div class="content">
+              Email
+            </div>
+          </h2>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="ui inverted vertical footer segment">
+    <div class="ui center aligned container">
+      <div class="ui stackable grid">
+        <div class="column">
+          <div class="ui inverted link list">
+            <a class="item" href="https://ppt.cc/fA9uAx" target="_blank" title="點我看組織章程">© 2022 NCHUIT, Club</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script charset="utf-8" src="//code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script>
+  <script charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script charset="utf-8" src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore-min.js"></script>
+  <script charset="utf-8" src="js/site.js?1"></script>
+  <script charset="utf-8" src="js/phaser.2.4.3.min.js"></script>
+  <script charset="utf-8" src="game/record.js?3"></script>
+  <script charset="utf-8" src="game/game.js?1"></script>
+  <script>(function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-67273442-1', 'auto'); ga('send', 'pageview');</script>
 </body>
 
 </html>
