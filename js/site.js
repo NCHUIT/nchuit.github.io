@@ -35,7 +35,7 @@ jQuery(document).ready(function($) {
     });
 });
 
-// Messenger 洽談外掛程式 SDK code
+// Messenger chat plugin SDK code
 var chatbox = document.getElementById('fb-customer-chat');
 chatbox.setAttribute("page_id", "628293563853646");
 chatbox.setAttribute("attribution", "biz_inbox");
