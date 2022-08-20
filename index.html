@@ -200,52 +200,52 @@
             <div class="ui two column stackable page grid">
               <div class="column"><a href="https://forms.gle/GoV8Mwf2545tDjUe7" class="fluid massive green ui button"
                   target="_blank">入社表單</a></div>
-              <div id="smart-button-container" class="ui center aligned column">
+            <div id="smart-button-container">
                 <div style="text-align: center;">
                   <div id="paypal-button-container"></div>
                 </div>
               </div>
-              <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=TWD" data-sdk-integration-source="button-factory"></script>
-              <script>
-                function initPayPalButton() {
-                  paypal.Buttons({
-                    style: {
-                      shape: 'pill',
-                      color: 'gold',
-                      layout: 'horizontal',
-                      label: 'paypal',
+            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=TWD" data-sdk-integration-source="button-factory"></script>
+            <script>
+              function initPayPalButton() {
+                paypal.Buttons({
+                  style: {
+                    shape: 'pill',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'paypal',
 
-                    },
+                  },
 
-                    createOrder: function(data, actions) {
-                      return actions.order.create({
-                        purchase_units: [{"description":"社費","amount":{"currency_code":"TWD","value":300}}]
-                      });
-                    },
+                  createOrder: function(data, actions) {
+                    return actions.order.create({
+                      purchase_units: [{"description":"社費","amount":{"currency_code":"TWD","value":300}}]
+                    });
+                  },
 
-                    onApprove: function(data, actions) {
-                      return actions.order.capture().then(function(orderData) {
+                  onApprove: function(data, actions) {
+                    return actions.order.capture().then(function(orderData) {
 
-                        // Full available details
-                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                      // Full available details
+                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
 
-                        // Show a success message within this page, e.g.
-                        const element = document.getElementById('paypal-button-container');
-                        element.innerHTML = '';
-                        element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                      // Show a success message within this page, e.g.
+                      const element = document.getElementById('paypal-button-container');
+                      element.innerHTML = '';
+                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
 
-                        // Or go to another URL:  actions.redirect('thank_you.html');
+                      // Or go to another URL:  actions.redirect('thank_you.html');
 
-                      });
-                    },
+                    });
+                  },
 
-                    onError: function(err) {
-                      console.log(err);
-                    }
-                  }).render('#paypal-button-container');
-                }
-                initPayPalButton();
-              </script>
+                  onError: function(err) {
+                    console.log(err);
+                  }
+                }).render('#paypal-button-container');
+              }
+              initPayPalButton();
+            </script>
             </div>
           </div>
         </div>
