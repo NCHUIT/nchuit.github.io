@@ -200,20 +200,52 @@
             <div class="ui two column stackable page grid">
               <div class="column"><a href="https://forms.gle/GoV8Mwf2545tDjUe7" class="fluid massive green ui button"
                   target="_blank">入社表單</a></div>
-              <form class="ui center aligned column" method="post" action="https://www.paypal.com/cgi-bin/webscr"
-                target="_blank">
-                <input type="hidden" name="cmd" value="_s-xclick">
-                <input type="hidden" name="hosted_button_id" value="GVLG9Q3FPP5HS">
-                <div><input type="hidden" name="on0" value="社費">社費(110學年所有活動免費體驗)</div>
-                <div><select name="os0">
-                    <option value="迎新/課時特惠">迎新/課時特惠 NT$300 TWD</option>
-                    <option value="正常收費">正常收費 NT$350 TWD</option>
-                  </select></div>
-                <input type="hidden" name="currency_code" value="TWD">
-                <input type="image" src="https://www.paypalobjects.com/zh_TW/TW/i/btn/btn_paynowCC_LG.gif" border="0"
-                  name="submit" alt="PayPal － 更安全、更簡單的線上付款方式！">
-                <img border="0" src="https://www.paypalobjects.com/zh_TW/i/scr/pixel.gif" width="1" height="1">
-              </form>
+              <div id="smart-button-container" class="ui center aligned column">
+                <div style="text-align: center;">
+                  <div id="paypal-button-container"></div>
+                </div>
+              </div>
+              <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=TWD" data-sdk-integration-source="button-factory"></script>
+              <script>
+                function initPayPalButton() {
+                  paypal.Buttons({
+                    style: {
+                      shape: 'pill',
+                      color: 'gold',
+                      layout: 'horizontal',
+                      label: 'paypal',
+
+                    },
+
+                    createOrder: function(data, actions) {
+                      return actions.order.create({
+                        purchase_units: [{"description":"社費","amount":{"currency_code":"TWD","value":300}}]
+                      });
+                    },
+
+                    onApprove: function(data, actions) {
+                      return actions.order.capture().then(function(orderData) {
+
+                        // Full available details
+                        console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+                        // Show a success message within this page, e.g.
+                        const element = document.getElementById('paypal-button-container');
+                        element.innerHTML = '';
+                        element.innerHTML = '<h3>Thank you for your payment!</h3>';
+
+                        // Or go to another URL:  actions.redirect('thank_you.html');
+
+                      });
+                    },
+
+                    onError: function(err) {
+                      console.log(err);
+                    }
+                  }).render('#paypal-button-container');
+                }
+                initPayPalButton();
+              </script>
             </div>
           </div>
         </div>
