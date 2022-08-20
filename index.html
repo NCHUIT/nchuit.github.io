@@ -9,12 +9,13 @@
   <meta property="og:image" content="https://i.imgur.com/cWwOx0N.png" />
   <title>中興大學資訊社官網</title>
   <link rel="shortcut icon" href="https://i.imgur.com/sQVQhdk.png" />
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
   <link rel="stylesheet" href="css/site.css?5">
-  <script src="//code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore-min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.6.2/fetch.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.2/underscore-min.js"></script>
+  <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=TWD" data-sdk-integration-source="button-factory"></script>
   <script src="js/phaser.2.4.3.min.js"></script>
   <script defer src="js/site.js?1"></script>
   <script defer src="game/record.js?3"></script>
@@ -24,8 +25,6 @@
 <body>
   <div id="fb-root"></div>
   <div id="fb-customer-chat" class="fb-customerchat"></div>
-  <!-- https://apps.elfsight.com/panel/applications/line-chat/ -->
-  <div class="elfsight-app-a11bb3c0-3780-4990-88c7-f4a2e16315b5"></div>
   <div id="index" class="viewport-height section with-background">
     <div id="mobile_game_fallback" class="background"></div>
     <div id="game" class="background"></div>
@@ -200,52 +199,11 @@
             <div class="ui two column stackable page grid">
               <div class="column"><a href="https://forms.gle/GoV8Mwf2545tDjUe7" class="fluid massive green ui button"
                   target="_blank">入社表單</a></div>
-            <div id="smart-button-container" class="ui center aligned column">
+              <div id="smart-button-container" class="column">
                 <div style="text-align: center;">
                   <div id="paypal-button-container"></div>
                 </div>
               </div>
-            <script src="https://www.paypal.com/sdk/js?client-id=sb&enable-funding=venmo&currency=TWD" data-sdk-integration-source="button-factory"></script>
-            <script>
-              function initPayPalButton() {
-                paypal.Buttons({
-                  style: {
-                    shape: 'pill',
-                    color: 'gold',
-                    layout: 'vertical',
-                    label: 'paypal',
-
-                  },
-
-                  createOrder: function(data, actions) {
-                    return actions.order.create({
-                      purchase_units: [{"description":"社費","amount":{"currency_code":"TWD","value":300}}]
-                    });
-                  },
-
-                  onApprove: function(data, actions) {
-                    return actions.order.capture().then(function(orderData) {
-
-                      // Full available details
-                      console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-                      // Show a success message within this page, e.g.
-                      const element = document.getElementById('paypal-button-container');
-                      element.innerHTML = '';
-                      element.innerHTML = '<h3>Thank you for your payment!</h3>';
-
-                      // Or go to another URL:  actions.redirect('thank_you.html');
-
-                    });
-                  },
-
-                  onError: function(err) {
-                    console.log(err);
-                  }
-                }).render('#paypal-button-container');
-              }
-              initPayPalButton();
-            </script>
             </div>
           </div>
         </div>
@@ -634,7 +592,6 @@
       </div>
     </div>
   </div>
-  <script>(function (i, s, o, g, r, a, m) { i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () { (i[r].q = i[r].q || []).push(arguments) }, i[r].l = 1 * new Date(); a = s.createElement(o), m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m) })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga'); ga('create', 'UA-67273442-1', 'auto'); ga('send', 'pageview');</script>
 </body>
 
 </html>
