@@ -10,6 +10,11 @@
   /*font-family: 'LiHei Pro','微軟正黑體';*/
 /* } */
 
+.ui.fluid.vertical.buttons,
+.ui.fluid.vertical.buttons > .button {
+  justify-content: center;
+}
+
 .ui.header {
   font-family: 'LiHei Pro', '微軟正黑體';
 }
