@@ -13,6 +13,7 @@
 .ui.fluid.vertical.buttons,
 .ui.fluid.vertical.buttons > .button {
   justify-content: center;
+  text-align: center;
 }
 
 .ui.header {
