@@ -7,10 +7,10 @@ function About() {
           <div className="w-24 h-1 bg-green-600 mx-auto"></div>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid md:grid-cols-2 gap-12 items-center ml-10 mr-10">
           <div>
             <img
-              src="/images/about-image.svg"
+              src="/images/greeting-code.svg"
               alt="About Us"
               className="rounded-lg shadow-xl w-full"
             />
@@ -18,31 +18,33 @@ function About() {
 
           <div>
             <h3 className="text-2xl font-semibold text-gray-800 mb-4">
-              中興大學資訊研究社
+              中興大學資訊科學研習社
             </h3>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              成立於1990年，中興大學資訊研究社是一個專注於培養學生資訊科技能力的社團。我們致力於提供多元化的程式設計課程、舉辦技術講座，以及組織各種資訊相關活動。
+              我們的目標是推廣興大的資訊風氣，使興大有更多能夠了解並且使用資訊科技的同學們，並且能夠透過本社團互相交流切磋。
             </p>
             <p className="text-gray-600 mb-6 leading-relaxed">
-              無論你是程式新手還是有經驗的開發者，我們都歡迎你加入我們的社群。在這裡，你可以與志同道合的夥伴一起學習、成長，並探索資訊科技的無限可能。
+              無論你是程式新手還是有經驗的開發者/對軟體或是硬體有興趣，我們都歡迎你加入我們。在這裡，你可以與志同道合的夥伴一起學習、成長，並探索資訊科技的無限可能！
             </p>
 
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-white p-4 rounded-lg shadow-md border-t-4 border-green-500">
-                <h4 className="font-semibold text-gray-800 mb-2">技術工作坊</h4>
+                <h4 className="font-semibold text-gray-800 mb-2">智造工作坊</h4>
                 <p className="text-gray-600">
-                  定期舉辦各種程式語言和技術的工作坊
+                  不定期舉辦 3D 列印、雷切等工作坊
                 </p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md border-t-4 border-green-500">
-                <h4 className="font-semibold text-gray-800 mb-2">專題製作</h4>
+                <h4 className="font-semibold text-gray-800 mb-2">專案開發</h4>
                 <p className="text-gray-600">
-                  指導學生完成各種資訊相關的專題項目
+                  手機 App、網頁等各式豐富的專案社課
                 </p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md border-t-4 border-green-500">
                 <h4 className="font-semibold text-gray-800 mb-2">程式競賽</h4>
-                <p className="text-gray-600">組織校內程式競賽，提升解題能力</p>
+                <p className="text-gray-600">
+                  組團參加各種程式競賽，提升演算法實力
+                </p>
               </div>
               <div className="bg-white p-4 rounded-lg shadow-md border-t-4 border-green-500">
                 <h4 className="font-semibold text-gray-800 mb-2">業界交流</h4>

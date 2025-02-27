@@ -3,7 +3,7 @@ function Hero() {
     <div className="bg-gradient-to-r from-green-800 to-green-600 text-white">
       <div className="container mx-auto px-4 py-20">
         <div className="flex flex-col md:flex-row items-center">
-          <div className="md:w-1/2 mb-10 md:mb-0">
+          <div className="md:w-1/2 mb-10 md:mb-0 ml-10 mr-10">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               探索程式的奧秘，開啟科技的未來
             </h1>
@@ -12,13 +12,13 @@ function Hero() {
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <a
-                href="#courses"
+                href="/courses"
                 className="bg-white text-green-800 hover:bg-gray-100 px-6 py-3 rounded-lg font-semibold text-center transition"
               >
                 探索課程
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className="bg-green-700 hover:bg-green-600 border border-white px-6 py-3 rounded-lg font-semibold text-center transition"
               >
                 加入我們

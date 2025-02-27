@@ -16,8 +16,7 @@ function Footer() {
               <span className="font-bold text-xl">NCHU 資訊科學研習社</span>
             </Link>
             <p className="text-gray-400 mb-4">
-              我們的目標是推廣興大的資訊風氣，使興大有更多能夠了解並且使用資訊科技的同學們，並且能夠透過本社團互相交流、取暖
-              (?)
+              無論你是程式新手還是有經驗的開發者/對軟體或是硬體有興趣，我們都歡迎你加入我們。在這裡，你可以與志同道合的夥伴一起學習、成長，並探索資訊科技的無限可能！
             </p>
             <div className="flex flex-wrap gap-3">
               <a
@@ -60,6 +59,52 @@ function Footer() {
                   />
                 </svg>
               </a>
+              {/* Threads */}
+              <a
+                href="https://www.threads.net/@nchuit.cc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <span className="sr-only">Threads</span>
+                <img
+                  src="/images/threads-app-icon.svg"
+                  alt="Threads"
+                  className="h-6 w-6 filter brightness-100 hover:brightness-200 transition-all"
+                />
+              </a>
+              {/* LINE */}
+              <a
+                href="https://line.me/ti/g2/bCw9X0sudfU1pZIzIGCEZHxsoDsDzbAe8HYlQA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <span className="sr-only">LINE</span>
+                <img
+                  src="/images/line-app-icon.svg"
+                  alt="LINE"
+                  className="h-5 w-5 mt-0.5 filter brightness-100 hover:brightness-200 transition-all"
+                />
+              </a>
+              {/* Discord */}
+              <a
+                href="https://discord.com/invite/6KNPVXhC"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white"
+              >
+                <span className="sr-only">Discord</span>
+                <svg
+                  className="h-6 w-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                </svg>
+              </a>
+              {/* GitHub */}
               <a
                 href="https://github.com/NCHUIT"
                 target="_blank"
@@ -80,20 +125,6 @@ function Footer() {
                   />
                 </svg>
               </a>
-              {/* Threads */}
-              <a
-                href="https://www.threads.net/@nchuit.cc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <span className="sr-only">Threads</span>
-                <img
-                  src="/images/threads-app-icon.svg"
-                  alt="Threads"
-                  className="h-6 w-6 filter brightness-100 hover:brightness-200 transition-all"
-                />
-              </a>
               {/* Email */}
               <a
                 href="mailto:it.nchu@gmail.com"
@@ -111,20 +142,6 @@ function Footer() {
                   <path d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
                   <path d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
                 </svg>
-              </a>
-              {/* LINE */}
-              <a
-                href="https://line.me/ti/g2/bCw9X0sudfU1pZIzIGCEZHxsoDsDzbAe8HYlQA"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <span className="sr-only">LINE</span>
-                <img
-                  src="/images/line-app-icon.svg"
-                  alt="LINE"
-                  className="h-5 w-5 mt-0.5 filter brightness-100 hover:brightness-200 transition-all"
-                />
               </a>
               {/* YouTube */}
               <a
@@ -145,23 +162,6 @@ function Footer() {
                     d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
                     clipRule="evenodd"
                   />
-                </svg>
-              </a>
-              {/* Discord */}
-              <a
-                href="https://discord.com/invite/6KNPVXhC"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-white"
-              >
-                <span className="sr-only">Discord</span>
-                <svg
-                  className="h-6 w-6"
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                  aria-hidden="true"
-                >
-                  <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
                 </svg>
               </a>
             </div>
@@ -189,14 +189,6 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/activities"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  活動紀錄
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/courses"
                   className="text-gray-400 hover:text-white transition"
                 >
@@ -220,34 +212,32 @@ function Footer() {
             <ul className="space-y-2">
               <li>
                 <a
-                  href="#"
+                  href="https://github.com/NCHUIT"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition"
                 >
-                  教學文件
+                  Github
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://docs.google.com/spreadsheets/d/1I4mREkUJYozfvOM75juT45uiS2cUI6VcydIk2hXpJQ4/edit?gid=0#gid=0"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition"
                 >
-                  程式碼範例
+                  社團收支表
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://hackmd.io/7T943wLjSZScvwYPny68vQ"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-gray-400 hover:text-white transition"
                 >
-                  常見問題
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-gray-400 hover:text-white transition"
-                >
-                  社團規章
+                  組織章程
                 </a>
               </li>
             </ul>
@@ -255,7 +245,7 @@ function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-          <p>&copy; {new Date().getFullYear()} NCHU 資訊研究社. 版權所有.</p>
+          <p>&copy; {new Date().getFullYear()} NCHU 資訊科學研習社</p>
         </div>
       </div>
     </footer>

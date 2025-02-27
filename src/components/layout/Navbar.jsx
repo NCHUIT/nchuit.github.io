@@ -24,20 +24,20 @@ function Navbar() {
           {/* 桌面版選單 */}
           <div className="hidden md:flex space-x-6">
             <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-green-200" : "hover:text-green-200 transition"
+              }
+            >
+              首頁
+            </NavLink>
+            <NavLink
               to="/about"
               className={({ isActive }) =>
                 isActive ? "text-green-200" : "hover:text-green-200 transition"
               }
             >
               關於我們
-            </NavLink>
-            <NavLink
-              to="/activities"
-              className={({ isActive }) =>
-                isActive ? "text-green-200" : "hover:text-green-200 transition"
-              }
-            >
-              活動紀錄
             </NavLink>
             <NavLink
               to="/courses"
@@ -88,6 +88,17 @@ function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden mt-3 pb-3 space-y-2">
             <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive
+                  ? "block bg-green-700 px-3 py-2 rounded"
+                  : "block hover:bg-green-700 px-3 py-2 rounded"
+              }
+              onClick={() => setIsMenuOpen(false)}
+            >
+              首頁
+            </NavLink>
+            <NavLink
               to="/about"
               className={({ isActive }) =>
                 isActive
@@ -97,17 +108,6 @@ function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               關於我們
-            </NavLink>
-            <NavLink
-              to="/activities"
-              className={({ isActive }) =>
-                isActive
-                  ? "block bg-green-700 px-3 py-2 rounded"
-                  : "block hover:bg-green-700 px-3 py-2 rounded"
-              }
-              onClick={() => setIsMenuOpen(false)}
-            >
-              活動紀錄
             </NavLink>
             <NavLink
               to="/courses"
