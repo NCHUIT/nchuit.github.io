@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { getImagePath } from "../../utils/path";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ function Navbar() {
           <div className="flex items-center space-x-2">
             <Link to="/">
               <img
-                src="/images/nchuit-icon.webp"
+                src={getImagePath("/images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
                 className="h-10 w-10"
               />

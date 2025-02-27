@@ -1,3 +1,5 @@
+import { getImagePath } from "../../utils/path";
+
 function Contact() {
   return (
     <section id="contact" className="py-16 bg-white">
@@ -52,7 +54,7 @@ function Contact() {
                   className="text-gray-600 hover:text-green-500 transition-colors"
                 >
                   <img
-                    src="/images/line-app-icon.svg"
+                    src={getImagePath("/images/line-app-icon.svg")}
                     alt="LINE"
                     className="h-10 w-10"
                   />

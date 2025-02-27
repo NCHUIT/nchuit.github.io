@@ -1,4 +1,5 @@
 import Members from "./Members";
+import { getImagePath } from "../../utils/path";
 
 function About() {
   return (
@@ -13,7 +14,7 @@ function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center ml-10 mr-10">
             <div>
               <img
-                src="/images/about-code.svg"
+                src={getImagePath("/images/about-code.svg")}
                 alt="About Us"
                 className="rounded-lg shadow-xl w-full"
               />

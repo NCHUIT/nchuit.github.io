@@ -4,4 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  base: "/nchuit-react-website/", // 設置為您的 GitHub 倉庫名
 });

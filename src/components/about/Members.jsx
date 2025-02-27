@@ -1,3 +1,5 @@
+import { getImagePath } from "../../utils/path";
+
 function Members() {
   // 社員資料
   const members = [
@@ -8,7 +10,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "電到不知道該寫哪個",
-      image: "/images/members/tingyue.svg",
+      image: getImagePath("/images/members/tingyue.svg"),
     },
     {
       id: 2,
@@ -17,7 +19,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "Python/Go",
-      image: "/images/members/junqi.webp",
+      image: getImagePath("/images/members/junqi.webp"),
     },
     {
       id: 3,
@@ -26,7 +28,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "超會管錢",
-      image: "/images/members/chongen.svg",
+      image: getImagePath("/images/members/chongen.svg"),
     },
     {
       id: 4,
@@ -35,7 +37,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "整天抱著演算法在啃",
-      image: "/images/members/weiting.svg",
+      image: getImagePath("/images/members/weiting.svg"),
     },
     {
       id: 5,
@@ -44,7 +46,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "整天抱著演算法在啃",
-      image: "/images/members/yunwei.svg",
+      image: getImagePath("/images/members/yunwei.svg"),
     },
     {
       id: 6,
@@ -53,7 +55,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "網站及 App 開發",
-      image: "/images/members/jiayuan.svg",
+      image: getImagePath("/images/members/jiayuan.svg"),
     },
     {
       id: 7,
@@ -62,7 +64,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "平面設計",
-      image: "/images/members/hongyi.svg",
+      image: getImagePath("/images/members/hongyi.svg"),
     },
     {
       id: 8,
@@ -71,7 +73,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "影音剪輯及文書處理",
-      image: "/images/members/guanhong.svg",
+      image: getImagePath("/images/members/guanhong.svg"),
     },
     {
       id: 9,
@@ -80,7 +82,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "IG/FB 運營",
-      image: "/images/members/yutang.svg",
+      image: getImagePath("/images/members/yutang.svg"),
     },
     {
       id: 10,
@@ -89,7 +91,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "Threads 運營",
-      image: "/images/members/chengyou.svg",
+      image: getImagePath("/images/members/chengyou.svg"),
     },
   ];
 
@@ -116,7 +118,9 @@ function Members() {
                   alt={member.name}
                   className="w-full h-full object-cover"
                   onError={(e) => {
-                    e.target.src = "/images/member-placeholder.svg";
+                    e.target.src = getImagePath(
+                      "/images/member-placeholder.svg"
+                    );
                   }}
                 />
               </div>

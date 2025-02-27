@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { getImagePath } from "../../utils/path";
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
           <div className="md:col-span-1 w-full max-w-md">
             <Link to="/" className="flex items-center mb-4">
               <img
-                src="/images/nchuit-icon.webp"
+                src={getImagePath("/images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
                 className="h-10 w-10 mr-3"
               />
@@ -68,7 +69,7 @@ function Footer() {
               >
                 <span className="sr-only">Threads</span>
                 <img
-                  src="/images/threads-app-icon.svg"
+                  src={getImagePath("/images/threads-app-icon.svg")}
                   alt="Threads"
                   className="h-6 w-6 filter brightness-100 hover:brightness-200 transition-all"
                 />
@@ -82,7 +83,7 @@ function Footer() {
               >
                 <span className="sr-only">LINE</span>
                 <img
-                  src="/images/line-app-icon.svg"
+                  src={getImagePath("/images/line-app-icon.svg")}
                   alt="LINE"
                   className="h-5 w-5 mt-0.5 filter brightness-100 hover:brightness-200 transition-all"
                 />
