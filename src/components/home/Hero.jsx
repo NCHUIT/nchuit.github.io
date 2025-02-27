@@ -27,7 +27,7 @@ function Hero() {
           </div>
           <div className="md:w-1/2">
             <img
-              src="/images/hero-image.svg"
+              src="/images/greeting-code.svg"
               alt="Programming Illustration"
               className="w-full max-w-lg mx-auto"
             />
