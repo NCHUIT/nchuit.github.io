@@ -80,9 +80,17 @@ function Courses() {
                   href="https://www.instagram.com/p/DGLaguyzeOO/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block mr-2 mb-2"
                 >
                   課程詳情
+                </a>
+                <a
+                  href="https://forms.gle/YrV1dRUjjr2k6Ngc7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block mb-2"
+                >
+                  立即報名
                 </a>
               </div>
             </div>
@@ -139,9 +147,17 @@ function Courses() {
                   href="https://www.instagram.com/p/DGLZqfMTg4g/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block mr-2 mb-2"
                 >
                   課程詳情
+                </a>
+                <a
+                  href="https://forms.gle/nAGejYUisgA8KfV18"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block mb-2"
+                >
+                  立即報名
                 </a>
               </div>
             </div>
@@ -172,6 +188,10 @@ function Courses() {
               <ul className="space-y-2 mb-6 flex-grow">
                 <li className="flex items-center">
                   <GreenCheck />
+                  <span className="text-gray-600">統合學分 1 分</span>
+                </li>
+                <li className="flex items-center">
+                  <GreenCheck />
                   <span className="text-gray-600">3D 列印</span>
                 </li>
                 <li className="flex items-center">
@@ -196,9 +216,17 @@ function Courses() {
                   href="https://www.instagram.com/p/DGLjFXvTOzu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block mr-2 mb-2"
                 >
                   課程詳情
+                </a>
+                <a
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSc5693oO1uVm1QTmPYqB2VGOpE_R6PvxcBzVHQxxg1cTKVxRg/viewform?usp=dialog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition cursor-pointer inline-block mb-2"
+                >
+                  立即報名
                 </a>
               </div>
             </div>
