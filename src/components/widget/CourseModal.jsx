@@ -150,7 +150,7 @@ function CourseModal({
               <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
               <button
                 onClick={handleClose}
-                className="text-gray-500 hover:text-gray-700 focus:outline-none"
+                className="text-gray-500 hover:text-gray-700 focus:outline-none cursor-pointer"
               >
                 <svg
                   className="w-6 h-6"
