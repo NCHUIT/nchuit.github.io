@@ -16,7 +16,7 @@ function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center ml-10 mr-10">
             <div>
               <LazyLoadImage
-                src={getImagePath("/images/about-code.png")}
+                src={getImagePath("images/about-code.png")}
                 alt="About Us"
                 effect="blur"
                 threshold={200}
@@ -24,10 +24,7 @@ function About() {
                 style={{
                   width: "100%",
                   height: "auto",
-                  maxWidth: "500px",
-                  objectFit: "contain",
-                  objectPosition: "center",
-                  margin: "0 auto",
+                  maxWidth: "600px",
                 }}
               />
             </div>

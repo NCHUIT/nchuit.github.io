@@ -12,7 +12,7 @@ function Footer() {
           <div className="md:col-span-1 w-full max-w-md">
             <Link to="/" className="flex items-center mb-4">
               <LazyLoadImage
-                src={getImagePath("/images/nchuit-icon.webp")}
+                src={getImagePath("images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
                 effect="blur"
                 className="h-10 w-10 mr-3 object-contain"
@@ -73,7 +73,7 @@ function Footer() {
               >
                 <span className="sr-only">Threads</span>
                 <LazyLoadImage
-                  src={getImagePath("/images/threads-app-icon.svg")}
+                  src={getImagePath("images/threads-app-icon.svg")}
                   alt="Threads"
                   effect="blur"
                   className="h-6 w-6 filter brightness-100 hover:brightness-200 transition-all object-contain"
@@ -95,7 +95,7 @@ function Footer() {
               >
                 <span className="sr-only">LINE</span>
                 <LazyLoadImage
-                  src={getImagePath("/images/line-app-icon.svg")}
+                  src={getImagePath("images/line-app-icon.svg")}
                   alt="LINE"
                   effect="blur"
                   className="h-5 w-5 mt-0.5 filter brightness-100 hover:brightness-200 transition-all object-contain"

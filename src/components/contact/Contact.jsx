@@ -56,17 +56,13 @@ function Contact() {
                   className="text-gray-600 hover:text-green-500 transition-colors flex items-center"
                 >
                   <LazyLoadImage
-                    src={getImagePath("/images/line-app-icon.svg")}
+                    src={getImagePath("images/line-app-icon.svg")}
                     alt="LINE"
                     effect="blur"
                     className="h-10 w-10 object-contain"
                     style={{
                       aspectRatio: "1/1",
                       maxHeight: "40px",
-                      maxWidth: "40px",
-                      width: "auto",
-                      height: "auto",
-                      marginTop: "4px",
                     }}
                   />
                 </a>

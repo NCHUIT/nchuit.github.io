@@ -6,10 +6,13 @@
 export function getImagePath(path) {
   // 如果路徑以 / 開頭，則去掉開頭的 /
   const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+
   // 獲取 base URL
-  const baseUrl = import.meta.env.BASE_URL;
+  const baseUrl = import.meta.env.BASE_URL || "/";
+
   // 確保 base URL 和路徑之間有一個斜線
   const separator = baseUrl.endsWith("/") ? "" : "/";
+
   // 結合 base URL 和清理後的路徑
   return `${baseUrl}${separator}${cleanPath}`;
 }

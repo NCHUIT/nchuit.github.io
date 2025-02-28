@@ -14,7 +14,7 @@ function Navbar() {
           <div className="flex items-center space-x-2">
             <Link to="/">
               <LazyLoadImage
-                src={getImagePath("/images/nchuit-icon.webp")}
+                src={getImagePath("images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
                 effect="blur"
                 className="h-10 w-10 object-contain"
