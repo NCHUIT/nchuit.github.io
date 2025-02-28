@@ -1,5 +1,7 @@
 import Members from "./Members";
 import { getImagePath } from "../../utils/path";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function About() {
   return (
@@ -13,9 +15,11 @@ function About() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center ml-10 mr-10">
             <div>
-              <img
+              <LazyLoadImage
                 src={getImagePath("/images/about-code.svg")}
                 alt="About Us"
+                effect="blur"
+                threshold={200}
                 className="rounded-lg shadow-xl w-full"
                 style={{
                   width: "100%",

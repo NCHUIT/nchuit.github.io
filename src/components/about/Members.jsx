@@ -1,4 +1,6 @@
 import { getImagePath } from "../../utils/path";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Members() {
   // 社員資料
@@ -133,9 +135,11 @@ function Members() {
                     overflow: "hidden",
                   }}
                 >
-                  <img
+                  <LazyLoadImage
                     src={member.image}
                     alt={member.name}
+                    effect="blur"
+                    threshold={200}
                     style={{
                       maxWidth: "90%",
                       maxHeight: "90%",

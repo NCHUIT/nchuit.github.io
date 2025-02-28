@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { getImagePath } from "../../utils/path";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +13,10 @@ function Navbar() {
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
             <Link to="/">
-              <img
+              <LazyLoadImage
                 src={getImagePath("/images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
+                effect="blur"
                 className="h-10 w-10 object-contain"
                 style={{
                   aspectRatio: "1/1",

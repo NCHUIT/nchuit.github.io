@@ -1,7 +1,16 @@
 import { getImagePath } from "../../utils/path";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Hero() {
+  // 預加載首頁大圖
+  useEffect(() => {
+    const img = new Image();
+    img.src = getImagePath("/images/greeting-code.svg");
+  }, []);
+
   return (
     <div className="bg-gradient-to-r from-green-800 to-green-600 text-white">
       <div className="container mx-auto px-4 py-20">
@@ -29,18 +38,27 @@ function Hero() {
             </div>
           </div>
           <div className="md:w-1/2">
-            <img
-              src={getImagePath("/images/greeting-code.svg")}
-              alt="Programming Illustration"
-              className="w-full max-w-lg mx-auto object-contain"
-              style={{
-                width: "100%",
-                height: "auto",
-                maxWidth: "500px",
-                objectFit: "contain",
-                objectPosition: "center",
-              }}
-            />
+            <picture>
+              <source
+                type="image/webp"
+                srcSet={`${getImagePath("/images/greeting-code.svg")} 1x`}
+              />
+              <LazyLoadImage
+                src={getImagePath("/images/greeting-code.svg")}
+                alt="Programming Illustration"
+                effect="blur"
+                threshold={100}
+                placeholderSrc={getImagePath("/images/member-placeholder.svg")}
+                wrapperClassName="w-full max-w-lg mx-auto"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: "500px",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                }}
+              />
+            </picture>
           </div>
         </div>
       </div>

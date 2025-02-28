@@ -1,4 +1,6 @@
 import { getImagePath } from "../../utils/path";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Contact() {
   return (
@@ -51,11 +53,12 @@ function Contact() {
                   href="https://line.me/ti/g2/bCw9X0sudfU1pZIzIGCEZHxsoDsDzbAe8HYlQA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-500 transition-colors"
+                  className="text-gray-600 hover:text-green-500 transition-colors flex items-center"
                 >
-                  <img
+                  <LazyLoadImage
                     src={getImagePath("/images/line-app-icon.svg")}
                     alt="LINE"
+                    effect="blur"
                     className="h-10 w-10 object-contain"
                     style={{
                       aspectRatio: "1/1",
@@ -63,6 +66,7 @@ function Contact() {
                       maxWidth: "40px",
                       width: "auto",
                       height: "auto",
+                      marginTop: "4px",
                     }}
                   />
                 </a>

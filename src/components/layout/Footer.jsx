@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import { getImagePath } from "../../utils/path";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Footer() {
   return (
@@ -9,9 +11,10 @@ function Footer() {
           {/* Logo and Description */}
           <div className="md:col-span-1 w-full max-w-md">
             <Link to="/" className="flex items-center mb-4">
-              <img
+              <LazyLoadImage
                 src={getImagePath("/images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
+                effect="blur"
                 className="h-10 w-10 mr-3 object-contain"
                 style={{ aspectRatio: "1/1" }}
               />
@@ -69,9 +72,10 @@ function Footer() {
                 className="text-gray-400 hover:text-white"
               >
                 <span className="sr-only">Threads</span>
-                <img
+                <LazyLoadImage
                   src={getImagePath("/images/threads-app-icon.svg")}
                   alt="Threads"
+                  effect="blur"
                   className="h-6 w-6 filter brightness-100 hover:brightness-200 transition-all object-contain"
                   style={{
                     aspectRatio: "1/1",
@@ -90,9 +94,10 @@ function Footer() {
                 className="text-gray-400 hover:text-white"
               >
                 <span className="sr-only">LINE</span>
-                <img
+                <LazyLoadImage
                   src={getImagePath("/images/line-app-icon.svg")}
                   alt="LINE"
+                  effect="blur"
                   className="h-5 w-5 mt-0.5 filter brightness-100 hover:brightness-200 transition-all object-contain"
                   style={{
                     aspectRatio: "1/1",
