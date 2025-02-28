@@ -1,6 +1,17 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import Lightbox from "yet-another-react-lightbox";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import "yet-another-react-lightbox/styles.css";
+
+// 自定義燈箱背景樣式
+const lightboxStyles = {
+  container: {
+    backgroundColor: "rgba(255, 255, 255, 0.7)",
+    backdropFilter: "blur(8px)",
+  },
+};
 
 // 用於渲染包含連結的段落
 const RichParagraph = ({ content }) => {
@@ -56,6 +67,7 @@ function CourseModal({
   const modalRef = useRef();
   const [isVisible, setIsVisible] = useState(false);
   const [isRendered, setIsRendered] = useState(false);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const handleClose = useCallback(() => {
     setIsVisible(false);
@@ -68,7 +80,10 @@ function CourseModal({
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
-        handleClose();
+        // 如果燈箱是開啟的，不要關閉模態框
+        if (!lightboxOpen) {
+          handleClose();
+        }
       }
     };
 
@@ -89,7 +104,13 @@ function CourseModal({
       document.removeEventListener("mousedown", handleClickOutside);
       document.body.style.overflow = "auto";
     };
-  }, [isOpen, handleClose]);
+  }, [isOpen, handleClose, lightboxOpen]);
+
+  // 處理圖片點擊事件，阻止事件冒泡
+  const handleImageClick = (e) => {
+    e.stopPropagation();
+    setLightboxOpen(true);
+  };
 
   if (!isRendered) return null;
 
@@ -118,22 +139,24 @@ function CourseModal({
           >
             {image ? (
               <div className="w-full h-full flex items-center justify-center p-4">
-                <LazyLoadImage
-                  src={image}
-                  alt={title}
-                  effect="blur"
-                  className="max-w-full max-h-full object-contain"
-                  wrapperProps={{
-                    style: {
-                      width: "100%",
-                      height: "100%",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                    },
-                  }}
-                  placeholderSrc={`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpolyline points='21 15 16 10 5 21'/%3E%3C/svg%3E`}
-                />
+                <div className="cursor-pointer" onClick={handleImageClick}>
+                  <LazyLoadImage
+                    src={image}
+                    alt={title}
+                    effect="blur"
+                    className="max-w-full max-h-full object-contain"
+                    wrapperProps={{
+                      style: {
+                        width: "100%",
+                        height: "100%",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                      },
+                    }}
+                    placeholderSrc={`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpolyline points='21 15 16 10 5 21'/%3E%3C/svg%3E`}
+                  />
+                </div>
               </div>
             ) : (
               <div className="w-full h-64 md:h-full flex items-center justify-center">
@@ -232,6 +255,52 @@ function CourseModal({
           </div>
         </div>
       </div>
+
+      {/* 圖片放大燈箱 */}
+      {image && (
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          slides={[{ src: image, alt: title }]}
+          plugins={[Zoom]}
+          styles={lightboxStyles}
+          animation={{ fade: 300 }}
+          carousel={{ finite: true }}
+          zoom={{
+            maxZoomPixelRatio: 5,
+            zoomInMultiplier: 1.5,
+            doubleTapDelay: 300,
+            doubleClickDelay: 300,
+            keyboardMoveDistance: 50,
+            wheelZoomDistanceFactor: 200,
+            pinchZoomDistanceFactor: 200,
+            scrollToZoom: true,
+            wheelScaleFactor: 0.2,
+            zoomOutMultiplier: 0.833,
+            animationDuration: 400,
+          }}
+          render={{
+            buttonPrev: () => null,
+            buttonNext: () => null,
+          }}
+          controller={{
+            closeOnBackdropClick: true,
+            closeOnPullDown: true,
+          }}
+          on={{
+            click: ({ event }) => {
+              const target = event.target;
+              const isImage =
+                target.tagName === "IMG" ||
+                target.classList.contains("yarl__slide_image") ||
+                target.closest(".yarl__slide_image");
+              if (!isImage) {
+                setLightboxOpen(false);
+              }
+            },
+          }}
+        />
+      )}
     </div>
   );
 }
