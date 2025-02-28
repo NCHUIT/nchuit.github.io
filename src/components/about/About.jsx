@@ -16,7 +16,15 @@ function About() {
               <img
                 src={getImagePath("/images/about-code.svg")}
                 alt="About Us"
-                className="rounded-lg shadow-xl w-full object-contain object-center"
+                className="rounded-lg shadow-xl w-full"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  maxWidth: "500px",
+                  objectFit: "contain",
+                  objectPosition: "center",
+                  margin: "0 auto",
+                }}
               />
             </div>
 

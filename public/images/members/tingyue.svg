@@ -1,6 +1,0 @@
-<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-  <rect width="400" height="400" fill="#e6f7ff" />
-  <circle cx="200" cy="150" r="80" fill="#1890ff" />
-  <rect x="120" y="250" width="160" height="120" rx="10" fill="#1890ff" />
-  <text x="200" y="380" font-family="Arial" font-size="16" text-anchor="middle" fill="#ffffff">王小明</text>
-</svg> 

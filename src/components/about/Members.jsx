@@ -99,33 +99,58 @@ function Members() {
     <section id="members" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-800 mb-4">社員介紹</h2>
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">幹部介紹</h2>
           <div className="w-24 h-1 bg-green-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            認識我們的核心團隊成員，他們致力於推廣資訊科技並為社團的發展貢獻力量。
+            認識我們的核心團隊成員，他們致力於推廣資訊科技並為社團的發展貢獻己力。
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ml-10 mr-10">
           {members.map((member) => (
             <div
               key={member.id}
-              className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:shadow-xl hover:-translate-y-2"
+              className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col"
+              style={{ height: "420px" }}
             >
-              <div className="h-64 overflow-hidden">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover object-center"
-                  style={{ aspectRatio: "1/1" }}
-                  onError={(e) => {
-                    e.target.src = getImagePath(
-                      "/images/member-placeholder.svg"
-                    );
+              <div
+                className="overflow-hidden flex items-center justify-center bg-gray-50"
+                style={{
+                  aspectRatio: "1/1",
+                  height: "250px",
+                  padding: "15px",
+                }}
+              >
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    backgroundColor: "#f9fafb",
+                    borderRadius: "8px",
+                    overflow: "hidden",
                   }}
-                />
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    style={{
+                      maxWidth: "90%",
+                      maxHeight: "90%",
+                      objectFit: "contain",
+                      objectPosition: "center",
+                    }}
+                    onError={(e) => {
+                      e.target.src = getImagePath(
+                        "/images/member-placeholder.svg"
+                      );
+                    }}
+                  />
+                </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 flex-grow">
                 <div className="flex justify-between items-center mb-3">
                   <h3 className="text-xl font-bold text-gray-800">
                     {member.name}

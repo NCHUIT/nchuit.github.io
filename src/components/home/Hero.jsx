@@ -32,8 +32,14 @@ function Hero() {
             <img
               src={getImagePath("/images/greeting-code.svg")}
               alt="Programming Illustration"
-              className="w-full max-w-lg mx-auto object-contain object-center"
-              style={{ aspectRatio: "1/1", maxHeight: "400px", width: "auto" }}
+              className="w-full max-w-lg mx-auto object-contain"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxWidth: "500px",
+                objectFit: "contain",
+                objectPosition: "center",
+              }}
             />
           </div>
         </div>

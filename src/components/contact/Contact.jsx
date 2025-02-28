@@ -18,7 +18,7 @@ function Contact() {
               <h3 className="text-xl font-semibold mb-4 text-gray-800">
                 社群媒體
               </h3>
-              <div className="flex space-x-6 items-center">
+              <div className="flex flex-wrap gap-4 items-center">
                 <a
                   href="https://www.facebook.com/nchuit.cc"
                   target="_blank"
