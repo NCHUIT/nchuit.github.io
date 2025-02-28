@@ -1,0 +1,6 @@
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="400" fill="#f3f4f6" />
+  <circle cx="200" cy="150" r="80" fill="#d1d5db" />
+  <rect x="120" y="250" width="160" height="120" rx="10" fill="#d1d5db" />
+  <text x="200" y="380" font-family="Arial" font-size="16" text-anchor="middle" fill="#6b7280">照片未提供</text>
+</svg> 
