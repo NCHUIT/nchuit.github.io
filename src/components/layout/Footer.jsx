@@ -12,7 +12,8 @@ function Footer() {
               <img
                 src={getImagePath("/images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
-                className="h-10 w-10 mr-3"
+                className="h-10 w-10 mr-3 object-contain"
+                style={{ aspectRatio: "1/1" }}
               />
               <span className="font-bold text-xl">NCHU 資訊科學研習社</span>
             </Link>
@@ -71,7 +72,14 @@ function Footer() {
                 <img
                   src={getImagePath("/images/threads-app-icon.svg")}
                   alt="Threads"
-                  className="h-6 w-6 filter brightness-100 hover:brightness-200 transition-all"
+                  className="h-6 w-6 filter brightness-100 hover:brightness-200 transition-all object-contain"
+                  style={{
+                    aspectRatio: "1/1",
+                    maxHeight: "24px",
+                    maxWidth: "24px",
+                    width: "auto",
+                    height: "auto",
+                  }}
                 />
               </a>
               {/* LINE */}
@@ -85,7 +93,14 @@ function Footer() {
                 <img
                   src={getImagePath("/images/line-app-icon.svg")}
                   alt="LINE"
-                  className="h-5 w-5 mt-0.5 filter brightness-100 hover:brightness-200 transition-all"
+                  className="h-5 w-5 mt-0.5 filter brightness-100 hover:brightness-200 transition-all object-contain"
+                  style={{
+                    aspectRatio: "1/1",
+                    maxHeight: "20px",
+                    maxWidth: "20px",
+                    width: "auto",
+                    height: "auto",
+                  }}
                 />
               </a>
               {/* Discord */}

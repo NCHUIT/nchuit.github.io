@@ -56,7 +56,14 @@ function Contact() {
                   <img
                     src={getImagePath("/images/line-app-icon.svg")}
                     alt="LINE"
-                    className="h-10 w-10"
+                    className="h-10 w-10 object-contain"
+                    style={{
+                      aspectRatio: "1/1",
+                      maxHeight: "40px",
+                      maxWidth: "40px",
+                      width: "auto",
+                      height: "auto",
+                    }}
                   />
                 </a>
                 <a

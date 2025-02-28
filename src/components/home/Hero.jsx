@@ -11,7 +11,7 @@ function Hero() {
               探索程式的奧秘，開啟科技的未來
             </h1>
             <p className="text-xl mb-8">
-              中興大學資訊研究社，帶你進入程式設計的世界，培養解決問題的能力。
+              中興大學資訊科學研習社，帶你進入程式設計的世界，培養解決問題的能力。
             </p>
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
               <Link
@@ -32,7 +32,8 @@ function Hero() {
             <img
               src={getImagePath("/images/greeting-code.svg")}
               alt="Programming Illustration"
-              className="w-full max-w-lg mx-auto"
+              className="w-full max-w-lg mx-auto object-contain object-center"
+              style={{ aspectRatio: "1/1", maxHeight: "400px", width: "auto" }}
             />
           </div>
         </div>

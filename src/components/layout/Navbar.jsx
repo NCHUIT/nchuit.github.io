@@ -14,7 +14,14 @@ function Navbar() {
               <img
                 src={getImagePath("/images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
-                className="h-10 w-10"
+                className="h-10 w-10 object-contain"
+                style={{
+                  aspectRatio: "1/1",
+                  maxHeight: "40px",
+                  maxWidth: "40px",
+                  width: "auto",
+                  height: "auto",
+                }}
               />
             </Link>
             <Link to="/" className="font-bold text-xl">

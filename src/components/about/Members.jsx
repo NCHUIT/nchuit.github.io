@@ -116,7 +116,8 @@ function Members() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-center"
+                  style={{ aspectRatio: "1/1" }}
                   onError={(e) => {
                     e.target.src = getImagePath(
                       "/images/member-placeholder.svg"
