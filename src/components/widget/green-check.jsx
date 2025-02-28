@@ -1,9 +1,10 @@
-export default function GreenCheck() {
+export default function GreenCheck({ color = "#4CAF50" }) {
   return (
     <svg
-      className="w-5 h-5 text-green-500 mr-2"
+      className="w-5 h-5 mr-2 flex-shrink-0"
       fill="currentColor"
       viewBox="0 0 20 20"
+      style={{ minWidth: "1.25rem", color: color }}
     >
       <path
         fillRule="evenodd"
