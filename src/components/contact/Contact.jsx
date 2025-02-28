@@ -53,13 +53,13 @@ function Contact() {
                   href="https://line.me/ti/g2/bCw9X0sudfU1pZIzIGCEZHxsoDsDzbAe8HYlQA"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-600 hover:text-green-500 transition-colors flex items-center"
+                  className="text-gray-600 hover:text-green-500 transition-colors flex items-center group"
                 >
                   <LazyLoadImage
-                    src={getImagePath("images/line-app-icon.svg")}
+                    src={getImagePath("images/line-app-icon-dark.svg")}
                     alt="LINE"
                     effect="blur"
-                    className="h-10 w-10 object-contain"
+                    className="h-10 w-10 object-contain transition-all duration-300 group-hover:[filter:invert(40%)_sepia(95%)_saturate(1352%)_hue-rotate(91deg)_brightness(96%)_contrast(105%)]"
                     style={{
                       aspectRatio: "1/1",
                       maxHeight: "40px",
