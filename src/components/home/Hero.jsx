@@ -8,7 +8,7 @@ function Hero() {
   // 預加載首頁大圖
   useEffect(() => {
     const img = new Image();
-    img.src = getImagePath("/images/greeting-code.svg");
+    img.src = getImagePath("/images/greeting-code.png");
   }, []);
 
   return (
@@ -41,15 +41,16 @@ function Hero() {
             <picture>
               <source
                 type="image/webp"
-                srcSet={`${getImagePath("/images/greeting-code.svg")} 1x`}
+                srcSet={`${getImagePath("/images/greeting-code.png")} 1x`}
               />
               <LazyLoadImage
-                src={getImagePath("/images/greeting-code.svg")}
+                src={getImagePath("/images/greeting-code.png")}
                 alt="Programming Illustration"
                 effect="blur"
                 threshold={100}
-                placeholderSrc={getImagePath("/images/member-placeholder.svg")}
+                placeholderSrc={getImagePath("/images/member-placeholder.png")}
                 wrapperClassName="w-full max-w-lg mx-auto"
+                className="rounded-lg shadow-xl"
                 style={{
                   width: "100%",
                   height: "auto",

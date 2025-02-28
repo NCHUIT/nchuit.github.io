@@ -112,47 +112,40 @@ function Members() {
           {members.map((member) => (
             <div
               key={member.id}
-              className="bg-gray-50 rounded-lg overflow-hidden shadow-md transition-transform duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col"
-              style={{ height: "420px" }}
+              className="bg-gray-50 rounded-lg shadow-md transition-transform duration-300 hover:shadow-xl hover:-translate-y-2 flex flex-col"
+              style={{ minHeight: "450px", height: "auto" }}
             >
               <div
-                className="overflow-hidden flex items-center justify-center bg-gray-50"
+                className="flex items-center justify-center bg-gray-50 p-6"
                 style={{
-                  aspectRatio: "1/1",
-                  height: "250px",
-                  padding: "15px",
+                  minHeight: "260px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
-                <div
+                <LazyLoadImage
+                  src={member.image}
+                  alt={member.name}
+                  effect="blur"
+                  threshold={200}
+                  className="rounded-lg"
+                  wrapperClassName="flex items-center justify-center"
                   style={{
-                    width: "100%",
-                    height: "100%",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    backgroundColor: "#f9fafb",
-                    borderRadius: "8px",
-                    overflow: "hidden",
+                    width: "auto",
+                    height: "auto",
+                    maxWidth: "85%",
+                    maxHeight: "200px",
+                    objectFit: "contain",
+                    objectPosition: "center",
+                    margin: "0 auto",
                   }}
-                >
-                  <LazyLoadImage
-                    src={member.image}
-                    alt={member.name}
-                    effect="blur"
-                    threshold={200}
-                    style={{
-                      maxWidth: "90%",
-                      maxHeight: "90%",
-                      objectFit: "contain",
-                      objectPosition: "center",
-                    }}
-                    onError={(e) => {
-                      e.target.src = getImagePath(
-                        "/images/member-placeholder.svg"
-                      );
-                    }}
-                  />
-                </div>
+                  onError={(e) => {
+                    e.target.src = getImagePath(
+                      "/images/member-placeholder.svg"
+                    );
+                  }}
+                />
               </div>
               <div className="p-6 flex-grow">
                 <div className="flex justify-between items-center mb-3">

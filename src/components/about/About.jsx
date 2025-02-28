@@ -16,7 +16,7 @@ function About() {
           <div className="grid md:grid-cols-2 gap-12 items-center ml-10 mr-10">
             <div>
               <LazyLoadImage
-                src={getImagePath("/images/about-code.svg")}
+                src={getImagePath("/images/about-code.png")}
                 alt="About Us"
                 effect="blur"
                 threshold={200}
