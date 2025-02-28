@@ -105,7 +105,7 @@ function CourseModal({
     >
       <div
         ref={modalRef}
-        className={`bg-white rounded-lg shadow-xl w-full max-w-5xl max-h-[90vh] overflow-y-auto transition-all duration-300 ease-in-out transform ${
+        className={`bg-white rounded-lg shadow-xl w-full max-w-5xl max-h-[90vh] overflow-y-auto modal-scrollbar transition-all duration-300 ease-in-out transform ${
           isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
         } flex flex-col md:flex-row`}
       >
@@ -117,13 +117,21 @@ function CourseModal({
             style={{ backgroundColor: color || "#4CAF50" }}
           >
             {image ? (
-              <div className="w-full h-full flex items-center justify-center">
+              <div className="w-full h-full flex items-center justify-center p-4">
                 <LazyLoadImage
                   src={image}
                   alt={title}
                   effect="blur"
                   className="max-w-full max-h-full object-contain"
-                  wrapperClassName="w-full h-full flex items-center justify-center"
+                  wrapperProps={{
+                    style: {
+                      width: "100%",
+                      height: "100%",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                    },
+                  }}
                   placeholderSrc={`data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24' height='24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpolyline points='21 15 16 10 5 21'/%3E%3C/svg%3E`}
                 />
               </div>
@@ -202,7 +210,7 @@ function CourseModal({
               </div>
             )}
 
-            <div className="mt-6 text-center space-x-4">
+            <div className="mt-6 mb-12 pb-8 text-center space-x-4">
               {registrationLink && (
                 <a
                   href={registrationLink}
