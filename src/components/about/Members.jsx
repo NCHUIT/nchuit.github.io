@@ -12,7 +12,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "電到不知道該寫哪個",
-      image: getImagePath("images/members/tingyue.svg"),
+      image: getImagePath("images/members/tingyue.jpg"),
     },
     {
       id: 2,
@@ -30,7 +30,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "超會管錢",
-      image: getImagePath("images/members/chongen.svg"),
+      image: getImagePath("images/members/chongen.jpg"),
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "整天抱著演算法在啃",
-      image: getImagePath("images/members/weiting.svg"),
+      image: getImagePath("images/members/weiting.jpg"),
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "整天抱著演算法在啃",
-      image: getImagePath("images/members/yunwei.svg"),
+      image: getImagePath("images/members/yunwei.jpg"),
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "網站及 App 開發",
-      image: getImagePath("images/members/jiayuan.svg"),
+      image: getImagePath("images/members/jiayuan.jpg"),
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "平面設計",
-      image: getImagePath("images/members/hongyi.svg"),
+      image: getImagePath("images/members/hongyi.jpg"),
     },
     {
       id: 8,
@@ -75,7 +75,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "影音剪輯及文書處理",
-      image: getImagePath("images/members/guanhong.svg"),
+      image: getImagePath("images/members/guanhong.jpg"),
     },
     {
       id: 9,
@@ -84,7 +84,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "IG/FB 運營",
-      image: getImagePath("images/members/yutang.svg"),
+      image: getImagePath("images/members/yutang.jpg"),
     },
     {
       id: 10,
@@ -93,7 +93,7 @@ function Members() {
       department: "電機資訊學院學士班",
       year: "大二",
       description: "Threads 運營",
-      image: getImagePath("images/members/chengyou.svg"),
+      image: getImagePath("images/members/chengyou.jpg"),
     },
   ];
 
