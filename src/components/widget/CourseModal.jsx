@@ -15,9 +15,20 @@ const lightboxStyles = {
 
 // 用於渲染包含連結的段落
 const RichParagraph = ({ content }) => {
-  // 如果內容是字串，直接渲染
+  // 如果內容是字串，直接渲染，處理換行符
   if (typeof content === "string") {
-    return <p>{content}</p>;
+    // 將字串中的 \n 分割成數組，然後用 <br /> 連接
+    const parts = content.split("\n");
+    return (
+      <p>
+        {parts.map((part, idx) => (
+          <React.Fragment key={idx}>
+            {idx > 0 && <br />}
+            {part}
+          </React.Fragment>
+        ))}
+      </p>
+    );
   }
 
   // 如果內容是數組（包含文本和連結的混合），則處理每個部分
@@ -25,23 +36,42 @@ const RichParagraph = ({ content }) => {
     return (
       <p>
         {content.map((part, idx) => {
-          // 如果部分是字串，直接渲染
+          // 如果部分是字串，直接渲染，處理換行符
           if (typeof part === "string") {
-            return <span key={idx}>{part}</span>;
+            // 將字串中的 \n 分割成數組，然後用 <br /> 連接
+            const textParts = part.split("\n");
+            return (
+              <React.Fragment key={idx}>
+                {textParts.map((textPart, textIdx) => (
+                  <React.Fragment key={`${idx}-${textIdx}`}>
+                    {textIdx > 0 && <br />}
+                    {textPart}
+                  </React.Fragment>
+                ))}
+              </React.Fragment>
+            );
           }
 
-          // 如果部分是對象（包含連結信息），渲染為連結
+          // 如果部分是對象（包含連結信息），渲染為連結，處理換行符
           if (part.link) {
+            // 將連結文字中的 \n 分割成數組，然後用 <br /> 連接
+            const linkTextParts = part.text.split("\n");
             return (
-              <a
-                key={idx}
-                href={part.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:underline"
-              >
-                {part.text}
-              </a>
+              <React.Fragment key={idx}>
+                {linkTextParts.map((textPart, textIdx) => (
+                  <React.Fragment key={`${idx}-${textIdx}`}>
+                    {textIdx > 0 && <br />}
+                    <a
+                      href={part.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      {textPart}
+                    </a>
+                  </React.Fragment>
+                ))}
+              </React.Fragment>
             );
           }
 

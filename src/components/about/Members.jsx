@@ -1,6 +1,78 @@
 import { getImagePath } from "../../utils/path";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import React from "react";
+
+// 用於渲染包含連結的段落
+const RichParagraph = ({ content }) => {
+  // 如果內容是字串，直接渲染，處理換行符
+  if (typeof content === "string") {
+    // 將字串中的 \n 分割成數組，然後用 <br /> 連接
+    const parts = content.split("\n");
+    return (
+      <p>
+        {parts.map((part, idx) => (
+          <React.Fragment key={idx}>
+            {idx > 0 && <br />}
+            {part}
+          </React.Fragment>
+        ))}
+      </p>
+    );
+  }
+
+  // 如果內容是數組（包含文本和連結的混合），則處理每個部分
+  if (Array.isArray(content)) {
+    return (
+      <p>
+        {content.map((part, idx) => {
+          // 如果部分是字串，直接渲染，處理換行符
+          if (typeof part === "string") {
+            // 將字串中的 \n 分割成數組，然後用 <br /> 連接
+            const textParts = part.split("\n");
+            return (
+              <React.Fragment key={idx}>
+                {textParts.map((textPart, textIdx) => (
+                  <React.Fragment key={`${idx}-${textIdx}`}>
+                    {textIdx > 0 && <br />}
+                    {textPart}
+                  </React.Fragment>
+                ))}
+              </React.Fragment>
+            );
+          }
+
+          // 如果部分是對象（包含連結信息），渲染為連結，處理換行符
+          if (part.link) {
+            // 將連結文字中的 \n 分割成數組，然後用 <br /> 連接
+            const linkTextParts = part.text.split("\n");
+            return (
+              <React.Fragment key={idx}>
+                {linkTextParts.map((textPart, textIdx) => (
+                  <React.Fragment key={`${idx}-${textIdx}`}>
+                    {textIdx > 0 && <br />}
+                    <a
+                      href={part.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-600 hover:underline"
+                    >
+                      {textPart}
+                    </a>
+                  </React.Fragment>
+                ))}
+              </React.Fragment>
+            );
+          }
+
+          return null;
+        })}
+      </p>
+    );
+  }
+
+  return null;
+};
 
 function Members() {
   // 社員資料
@@ -11,7 +83,15 @@ function Members() {
       role: "社長",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "電到不知道該寫哪個",
+      description: [
+        "本社的靈魂人物，負責社團的日常運作與規劃。基本上是個與社團靈魂綁定的存在。",
+        "程競和專案開發兼修，常用 C++/Python/JavaScript，也有做過物聯網專案。",
+        "比你想像的還要電，但是為了很謙虛，事蹟被你知道的時候通常都已經捲完了。",
+        [
+          "Github：",
+          { text: "TingYueLai", link: "https://github.com/TingYueLai" },
+        ],
+      ],
       image: getImagePath("images/members/tingyue.jpg"),
     },
     {
@@ -20,16 +100,36 @@ function Members() {
       role: "副社長",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "Python/Go",
+      description: [
+        "雖然自稱 Golang 廚但一直用 Python 開發新專案。主要的工作是負責協助社長處理社團事務。",
+        "有時候也會奴役 AI 幫自己寫網站，近期有疑似越來越愛用 Cursor 的跡象。",
+        [
+          "部落格：",
+          { text: "Pytree's Blog\n", link: "https://blog.pytree.dev/" },
+          "Youtube 頻道：",
+          {
+            text: "碼農交易所\n",
+            link: "https://www.youtube.com/@codefarmers",
+          },
+          "Github：",
+          {
+            text: "coke5151",
+            link: "https://github.com/coke5151",
+          },
+        ],
+      ],
       image: getImagePath("images/members/junqi.webp"),
     },
     {
       id: 3,
       name: "曾崇恩",
       role: "總務",
-      department: "電機資訊學院學士班",
+      department: "資訊工程學系",
       year: "大二",
-      description: "超會管錢",
+      description: [
+        ["他是我們的財政部長\n", "期末請客都靠他（X"],
+        "因為請客實在太重要了我不敢亂寫，只好把介紹空著等他自己來補。",
+      ],
       image: getImagePath("images/members/chongen.jpg"),
     },
     {
@@ -38,7 +138,12 @@ function Members() {
       role: "教學",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "整天抱著演算法在啃",
+      description: [
+        "演算法大佬，整天都在裝弱。口中盡是些「線段樹」、「最小生成樹」之類知乎者也的話。",
+        "你真的可以看到他抱著一本很厚的演算法在啃，而且啃得很開心。",
+        "負責規劃與執行社團教學活動，像是接洽及協助講師規劃課程。",
+        ["Github：", { text: "eggeggwe", link: "https://github.com/eggeggwe" }],
+      ],
       image: getImagePath("images/members/weiting.jpg"),
     },
     {
@@ -47,7 +152,10 @@ function Members() {
       role: "教學",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "整天抱著演算法在啃",
+      description: [
+        "雖然一直說要走電機，但是好像也很容易在程競比賽看見他的身影。",
+        "擔任我們社團的 3D 列印講師，也常常打 Arduino 或機器人比賽。",
+      ],
       image: getImagePath("images/members/yunwei.jpg"),
     },
     {
@@ -56,7 +164,18 @@ function Members() {
       role: "網管",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "網站及 App 開發",
+      description: [
+        [
+          "擅長使用 ",
+          { text: "Flutter", link: "https://flutter.dev/" },
+          " 進行開發，不管是手機 App/電腦 Application 或是 Web 都是他的涉略範圍。",
+        ],
+        "除了是我們社團的網管，這學期也是 Flutter 課程的講師。雖然他總是說自己很弱，但其實私底下偷學了不少東西。",
+        [
+          "Github：",
+          { text: "teddywang0824", link: "https://github.com/teddywang0824" },
+        ],
+      ],
       image: getImagePath("images/members/jiayuan.jpg"),
     },
     {
@@ -65,7 +184,15 @@ function Members() {
       role: "美宣",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "平面設計",
+      description: [
+        "我們社團的美術擔當，你可以看到的海報大部分都是他做的，同時也會電繪及 PhotoShop。",
+        "身為「資訊」社的美宣，理所應當地很擅長結合 AI 生圖與修圖，極度高產地生維持社團文宣圖的產出。",
+        "除了平面設計，也疑似對 3D 建模、微處理機很感興趣。",
+        [
+          "Github：",
+          { text: "undertaker4141", link: "https://github.com/undertaker4141" },
+        ],
+      ],
       image: getImagePath("images/members/hongyi.jpg"),
     },
     {
@@ -74,7 +201,14 @@ function Members() {
       role: "行銷",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "影音剪輯及文書處理",
+      description: [
+        "負責我們社團的行銷、Email 及宣傳文案，同時也擔任我們的剪輯師。",
+        "職掌非常廣泛，其實常常會被我們抓去打輔助。比如講以不同的視角優化我們的上課方式及網站，可以說是最佳品管師。",
+        [
+          "Github：",
+          { text: "chungkuanhung", link: "https://github.com/chungkuanhung/" },
+        ],
+      ],
       image: getImagePath("images/members/guanhong.jpg"),
     },
     {
@@ -83,7 +217,10 @@ function Members() {
       role: "公關",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "IG/FB 運營",
+      description: [
+        "負責處理 Facebook、Instagram 的貼文及訊息回覆。平常做事很低調。",
+        "低調的人通常都是狠角色，所以我把簡介放在這邊等他自己來補！（已逃跑",
+      ],
       image: getImagePath("images/members/yutang.jpg"),
     },
     {
@@ -92,7 +229,10 @@ function Members() {
       role: "小編",
       department: "電機資訊學院學士班",
       year: "大二",
-      description: "Threads 運營",
+      description: [
+        "大家覺得一個社團的 Threads 小編需要具備什麼特質？想必是…",
+        "究極活網！！！相信大家自然而然會從網路上認識他的。",
+      ],
       image: getImagePath("images/members/chengyou.jpg"),
     },
   ];
@@ -161,7 +301,17 @@ function Members() {
                     {member.department} | {member.year}
                   </p>
                 </div>
-                <p className="text-gray-600">{member.description}</p>
+                <div className="text-gray-600 space-y-3">
+                  {Array.isArray(member.description) ? (
+                    member.description.map((paragraph, index) => (
+                      <div key={index}>
+                        <RichParagraph content={paragraph} />
+                      </div>
+                    ))
+                  ) : (
+                    <RichParagraph content={member.description} />
+                  )}
+                </div>
               </div>
             </div>
           ))}
