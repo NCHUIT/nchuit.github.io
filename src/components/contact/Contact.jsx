@@ -109,7 +109,7 @@ function Contact() {
                 href="https://docs.google.com/forms/d/e/1FAIpQLSeR3GEL3AgPI93930etIYxr4fReEZG9fXpB-z_xeFBJshs7zQ/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-3 bg-green-600 text-white font-medium rounded-lg shadow-md hover:bg-green-700 transition duration-300 ease-in-out"
+                className="inline-block px-6 py-3 bg-green-600 text-white font-bold rounded-lg shadow-md hover:bg-green-700 transition duration-300 ease-in-out"
               >
                 立即入社
               </a>
