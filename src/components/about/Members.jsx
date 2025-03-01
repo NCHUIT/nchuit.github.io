@@ -124,7 +124,7 @@ function Members() {
       id: 3,
       name: "曾崇恩",
       role: "總務",
-      department: "資訊工程學系",
+      department: "生物產業機電工程學系",
       year: "大二",
       description: [
         ["他是我們的財政部長\n", "期末請客都靠他（X"],
