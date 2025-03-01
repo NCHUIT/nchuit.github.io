@@ -72,7 +72,7 @@ function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="focus:outline-none"
+              className="focus:outline-none cursor-pointer"
             >
               <svg
                 className="h-6 w-6"
