@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import ScrollLink from "../../utils/ScrollLink";
 import { getImagePath } from "../../utils/path";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -10,7 +10,7 @@ function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-items-center">
           {/* Logo and Description */}
           <div className="md:col-span-1 w-full max-w-md">
-            <Link to="/" className="flex items-center mb-4">
+            <ScrollLink to="/" className="flex items-center mb-4">
               <LazyLoadImage
                 src={getImagePath("images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
@@ -19,7 +19,7 @@ function Footer() {
                 style={{ aspectRatio: "1/1" }}
               />
               <span className="font-bold text-xl">NCHU 資訊科學研習社</span>
-            </Link>
+            </ScrollLink>
             <p className="text-gray-400 mb-4">
               無論你是程式新手還是有經驗的開發者/對軟體或是硬體有興趣，我們都歡迎你加入我們。在這裡，你可以與志同道合的夥伴一起學習、成長，並探索資訊科技的無限可能！
             </p>
@@ -193,36 +193,36 @@ function Footer() {
             <h3 className="text-lg font-semibold mb-4">快速連結</h3>
             <ul className="space-y-2">
               <li>
-                <Link
+                <ScrollLink
                   to="/"
                   className="text-gray-400 hover:text-white transition"
                 >
                   首頁
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
+                <ScrollLink
                   to="/about"
                   className="text-gray-400 hover:text-white transition"
                 >
                   關於我們
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
+                <ScrollLink
                   to="/courses"
                   className="text-gray-400 hover:text-white transition"
                 >
                   課程資訊
-                </Link>
+                </ScrollLink>
               </li>
               <li>
-                <Link
+                <ScrollLink
                   to="/contact"
                   className="text-gray-400 hover:text-white transition"
                 >
                   聯絡我們
-                </Link>
+                </ScrollLink>
               </li>
             </ul>
           </div>

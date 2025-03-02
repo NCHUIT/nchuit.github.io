@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import ScrollLink from "../../utils/ScrollLink";
+import ScrollNavLink from "../../utils/ScrollNavLink";
 import { getImagePath } from "../../utils/path";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -12,7 +13,7 @@ function Navbar() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Link to="/">
+            <ScrollLink to="/">
               <LazyLoadImage
                 src={getImagePath("images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
@@ -26,46 +27,46 @@ function Navbar() {
                   height: "auto",
                 }}
               />
-            </Link>
-            <Link to="/" className="font-bold text-xl">
+            </ScrollLink>
+            <ScrollLink to="/" className="font-bold text-xl">
               NCHUIT
-            </Link>
+            </ScrollLink>
           </div>
 
           {/* 桌面版選單 */}
           <div className="hidden md:flex space-x-6">
-            <NavLink
+            <ScrollNavLink
               to="/"
               className={({ isActive }) =>
                 isActive ? "text-green-200" : "hover:text-green-200 transition"
               }
             >
               首頁
-            </NavLink>
-            <NavLink
+            </ScrollNavLink>
+            <ScrollNavLink
               to="/about"
               className={({ isActive }) =>
                 isActive ? "text-green-200" : "hover:text-green-200 transition"
               }
             >
               關於我們
-            </NavLink>
-            <NavLink
+            </ScrollNavLink>
+            <ScrollNavLink
               to="/courses"
               className={({ isActive }) =>
                 isActive ? "text-green-200" : "hover:text-green-200 transition"
               }
             >
               課程資訊
-            </NavLink>
-            <NavLink
+            </ScrollNavLink>
+            <ScrollNavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive ? "text-green-200" : "hover:text-green-200 transition"
               }
             >
               聯絡我們
-            </NavLink>
+            </ScrollNavLink>
           </div>
 
           {/* 手機版選單按鈕 */}
@@ -98,7 +99,7 @@ function Navbar() {
         {/* 手機版下拉選單 */}
         {isMenuOpen && (
           <div className="md:hidden mt-3 pb-3 space-y-2">
-            <NavLink
+            <ScrollNavLink
               to="/"
               className={({ isActive }) =>
                 isActive
@@ -108,8 +109,8 @@ function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               首頁
-            </NavLink>
-            <NavLink
+            </ScrollNavLink>
+            <ScrollNavLink
               to="/about"
               className={({ isActive }) =>
                 isActive
@@ -119,8 +120,8 @@ function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               關於我們
-            </NavLink>
-            <NavLink
+            </ScrollNavLink>
+            <ScrollNavLink
               to="/courses"
               className={({ isActive }) =>
                 isActive
@@ -130,8 +131,8 @@ function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               課程資訊
-            </NavLink>
-            <NavLink
+            </ScrollNavLink>
+            <ScrollNavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive
@@ -141,7 +142,7 @@ function Navbar() {
               onClick={() => setIsMenuOpen(false)}
             >
               聯絡我們
-            </NavLink>
+            </ScrollNavLink>
           </div>
         )}
       </div>
