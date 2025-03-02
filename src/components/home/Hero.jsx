@@ -5,7 +5,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
 function Hero() {
-  // 預加載首頁大圖
+  // Preloading 首頁大圖
   useEffect(() => {
     const img = new Image();
     img.src = getImagePath("images/greeting-code.png");

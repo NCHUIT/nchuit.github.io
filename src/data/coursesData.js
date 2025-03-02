@@ -1,4 +1,6 @@
 // iconName 代表的是 src/components/widget/CourseIcon.jsx 的 iconName
+// 可以自由在 CourseIcon.jsx 中添加新的 icon
+
 import { getImagePath } from "../utils/path.js";
 
 const coursesData = [

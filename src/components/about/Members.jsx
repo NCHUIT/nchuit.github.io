@@ -5,9 +5,9 @@ import React from "react";
 
 // 用於渲染包含連結的段落
 const RichParagraph = ({ content }) => {
-  // 如果內容是字串，直接渲染，處理換行符
+  // 如果內容是字串，直接渲染，處理換行符號
   if (typeof content === "string") {
-    // 將字串中的 \n 分割成數組，然後用 <br /> 連接
+    // 將字串中的 \n 分割成 Array，然後用 <br /> 連接
     const parts = content.split("\n");
     return (
       <p>
@@ -21,14 +21,14 @@ const RichParagraph = ({ content }) => {
     );
   }
 
-  // 如果內容是數組（包含文本和連結的混合），則處理每個部分
+  // 如果內容是 Array（包含 text 和 link）
   if (Array.isArray(content)) {
     return (
       <p>
         {content.map((part, idx) => {
-          // 如果部分是字串，直接渲染，處理換行符
+          // 如果是字串，直接渲染並處理換行符號
           if (typeof part === "string") {
-            // 將字串中的 \n 分割成數組，然後用 <br /> 連接
+            // 將字串中的 \n 分割成 Array，然後用 <br /> 連接
             const textParts = part.split("\n");
             return (
               <React.Fragment key={idx}>
@@ -42,9 +42,9 @@ const RichParagraph = ({ content }) => {
             );
           }
 
-          // 如果部分是對象（包含連結信息），渲染為連結，處理換行符
+          // 如果部分是 link，渲染為連結，處理換行符號
           if (part.link) {
-            // 將連結文字中的 \n 分割成數組，然後用 <br /> 連接
+            // 將連結文字中的 \n 分割成 Array，然後用 <br /> 連接
             const linkTextParts = part.text.split("\n");
             return (
               <React.Fragment key={idx}>
@@ -75,7 +75,7 @@ const RichParagraph = ({ content }) => {
 };
 
 function Members() {
-  // 社員資料
+  // 幹部資料
   const members = [
     {
       id: 1,

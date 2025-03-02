@@ -5,7 +5,7 @@ import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import "yet-another-react-lightbox/styles.css";
 
-// 自定義燈箱背景樣式
+// 自定義 lightbox 的背景樣式
 const lightboxStyles = {
   container: {
     backgroundColor: "rgba(255, 255, 255, 0.7)",
@@ -13,11 +13,11 @@ const lightboxStyles = {
   },
 };
 
-// 用於渲染包含連結的段落
+// 用於渲染包含 link 的段落
 const RichParagraph = ({ content }) => {
-  // 如果內容是字串，直接渲染，處理換行符
+  // 如果內容是字串，直接渲染，處理換行符號
   if (typeof content === "string") {
-    // 將字串中的 \n 分割成數組，然後用 <br /> 連接
+    // 將字串中的 \n 分割成 Array，然後用 <br /> 連接
     const parts = content.split("\n");
     return (
       <p>
@@ -31,14 +31,14 @@ const RichParagraph = ({ content }) => {
     );
   }
 
-  // 如果內容是數組（包含文本和連結的混合），則處理每個部分
+  // 如果內容是 Array（包含 text 和 link）
   if (Array.isArray(content)) {
     return (
       <p>
         {content.map((part, idx) => {
-          // 如果部分是字串，直接渲染，處理換行符
+          // 如果部分是字串，直接渲染，處理換行符號
           if (typeof part === "string") {
-            // 將字串中的 \n 分割成數組，然後用 <br /> 連接
+            // 將字串中的 \n 分割成 Array，然後用 <br /> 連接
             const textParts = part.split("\n");
             return (
               <React.Fragment key={idx}>
@@ -52,9 +52,9 @@ const RichParagraph = ({ content }) => {
             );
           }
 
-          // 如果部分是對象（包含連結信息），渲染為連結，處理換行符
+          // 如果部分是 link，渲染為連結，處理換行符號
           if (part.link) {
-            // 將連結文字中的 \n 分割成數組，然後用 <br /> 連接
+            // 將連結文字中的 \n 分割成 Array，然後用 <br /> 連接
             const linkTextParts = part.text.split("\n");
             return (
               <React.Fragment key={idx}>
@@ -110,7 +110,7 @@ function CourseModal({
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (modalRef.current && !modalRef.current.contains(event.target)) {
-        // 如果燈箱是開啟的，不要關閉模態框
+        // 如果 lightbox 是開啟的，不要關閉 CourseModal
         if (!lightboxOpen) {
           handleClose();
         }
@@ -122,7 +122,7 @@ function CourseModal({
       document.addEventListener("mousedown", handleClickOutside);
       document.body.style.overflow = "hidden";
 
-      // 使用 requestAnimationFrame 確保 DOM 已更新後再添加可見性類
+      // 讓 CourseModal 有淡入放大的效果
       requestAnimationFrame(() => {
         requestAnimationFrame(() => {
           setIsVisible(true);
@@ -136,7 +136,7 @@ function CourseModal({
     };
   }, [isOpen, handleClose, lightboxOpen]);
 
-  // 處理圖片點擊事件，阻止事件冒泡
+  // 處理圖片點擊事件，避免 CourseModal 一起被關閉
   const handleImageClick = (e) => {
     e.stopPropagation();
     setLightboxOpen(true);
@@ -286,7 +286,7 @@ function CourseModal({
         </div>
       </div>
 
-      {/* 圖片放大燈箱 */}
+      {/* 圖片和 lightbox */}
       {image && (
         <Lightbox
           open={lightboxOpen}

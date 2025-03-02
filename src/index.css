@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* 自定義滾動條樣式 */
+/* 自定義 scrollbar 樣式 */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -21,13 +21,13 @@
   background: #a1a1a1;
 }
 
-/* Firefox 滾動條樣式 */
+/* Firefox scrollbar 樣式 */
 * {
   scrollbar-width: thin;
   scrollbar-color: #c1c1c1 #f1f1f1;
 }
 
-/* 針對模態框的滾動條樣式 */
+/* CourseModal 內的 scrollbar 樣式 */
 .modal-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #c1c1c1 #f1f1f1;
