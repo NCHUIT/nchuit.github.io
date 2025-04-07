@@ -36,7 +36,7 @@ function Contact() {
                   </svg>
                 </a>
                 <a
-                  href="https://www.instagram.com/nchuit.cc"
+                  href="https://www.instagram.com/nchu_it"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-600 hover:text-pink-600 transition-colors"

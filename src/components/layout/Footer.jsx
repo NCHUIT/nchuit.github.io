@@ -45,7 +45,7 @@ function Footer() {
                 </svg>
               </a>
               <a
-                href="https://www.instagram.com/nchuit.cc"
+                href="https://www.instagram.com/nchu_it"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
@@ -66,7 +66,7 @@ function Footer() {
               </a>
               {/* Threads */}
               <a
-                href="https://www.threads.net/@nchuit.cc"
+                href="https://www.threads.net/@nchu_it"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white"
