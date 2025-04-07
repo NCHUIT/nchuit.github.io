@@ -147,7 +147,7 @@ function Contact() {
                     <p className="text-gray-800 font-medium">社辦地點</p>
                     <p className="text-gray-600">
                       <a
-                        href="https://g.co/kgs/7tE3BJZ"
+                        href="https://maps.app.goo.gl/7woizDvmXRLjgDB59"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
