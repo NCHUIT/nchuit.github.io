@@ -4,6 +4,7 @@ import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/about/AboutPage";
 import CoursesPage from "./pages/courses/CoursesPage";
 import ContactPage from "./pages/contact/ContactPage";
+import OrderPage from "./pages/order/OrderPage";
 import ScrollToTop from "./utils/ScrollToTop";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="courses" element={<CoursesPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="services" element={<OrderPage />} />
         </Route>
       </Routes>
     </Router>
