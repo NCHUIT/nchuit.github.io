@@ -13,7 +13,7 @@ function Navbar() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <ScrollLink to="/">
+            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
               <LazyLoadImage
                 src={getImagePath("images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
@@ -27,7 +27,7 @@ function Navbar() {
                   height: "auto",
                 }}
               />
-            </ScrollLink>
+            </a>
             <ScrollLink to="/" className="font-bold text-xl">
               NCHUIT
             </ScrollLink>
