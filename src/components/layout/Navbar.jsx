@@ -13,7 +13,7 @@ function Navbar() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <a href="https://www.youtube.com/watch?v=xvFZjo5PgG0">
+            <a href="https://www.youtube.com/watch?v=NJFH9yXXcE4">
               <LazyLoadImage
                 src={getImagePath("images/nchuit-icon.webp")}
                 alt="NCHU IT Logo"
