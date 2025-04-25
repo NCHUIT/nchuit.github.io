@@ -5,18 +5,18 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 function Order() {
 
     return (
-        <section id="laser-cutting" className="py-20 bg-gray-50">
+        <section id="laser-cutting" className="py-16 bg-gray-50">
             <div className="container mx-auto px-4">
                 {/* 標題區 */}
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-gray-800 mb-3">客製化鑰匙圈</h2>
-                    <div className="w-20 h-1 bg-green-600 mx-auto mb-4" />
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                <div className="text-center mb-12">
+                    <h2 className="text-3xl font-bold text-gray-800 mb-4">客製化鑰匙圈</h2>
+                    <div className="w-24 h-1 bg-green-600 mx-auto" />
+                    <p className="text-gray-600 max-w-2xl mx-auto mt-4">
                         中興大學資訊科學研習社提供客製化鑰匙圈製作服務，有興趣的朋友歡迎向下了解更多資訊 ~
                     </p>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12">
+                <div className="grid md:grid-cols-2 gap-12 ml-10 mr-10">
                     {/* 作品展示 */}
                     <div>
                         <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">作品展示</h3>
