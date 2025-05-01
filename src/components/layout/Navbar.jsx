@@ -143,6 +143,16 @@ function Navbar() {
               課程資訊
             </ScrollNavLink>
             <ScrollNavLink
+              to="/services"
+              className={({ isActive }) =>
+                isActive
+                  ? "block bg-green-700 px-3 py-2 rounded"
+                  : "block hover:bg-green-700 px-3 py-2 rounded"
+              }
+            >
+              客製商品
+            </ScrollNavLink>
+            <ScrollNavLink
               to="/contact"
               className={({ isActive }) =>
                 isActive
@@ -154,14 +164,6 @@ function Navbar() {
               聯絡我們
             </ScrollNavLink>
 
-            <ScrollNavLink
-              to="/services"
-              className={({ isActive }) =>
-                isActive ? "text-green-200" : "hover:text-green-200 transition"
-              }
-            >
-              客製商品
-            </ScrollNavLink>
           </div>
         )}
       </div>

@@ -1,11 +1,11 @@
 import Order from "../../components/order/Order";
 
 function OrderPage() {
-return (
+    return (
     <>
-    <Order />
+        <Order />
     </>
-);
+    );
 }
 
 export default OrderPage;

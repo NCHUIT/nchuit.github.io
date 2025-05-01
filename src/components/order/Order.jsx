@@ -28,7 +28,7 @@ function Order() {
                             }, {
                                 title: "客製化設計",
                                 img: "images/exhibits/wood.png",
-                                desc: "依照您的需求打造專屬的鑰匙圈，有皮革(上)以及實木(下)兩種選擇~",
+                                desc: "依照您的需求打造專屬的鑰匙圈，有皮革(右)以及實木(左)兩種選擇~",
                             }].map((item, idx) => (
                                 <div key={idx} className="py-10 bg-white border-t-4 border-orange-500 p-5 rounded-lg shadow-md hover:shadow-lg transition-shadow">
                                     <h4 className="text-lg font-semibold text-gray-800 mb-5">{item.title}</h4>
@@ -36,7 +36,7 @@ function Order() {
                                         src={getImagePath(item.img)}
                                         alt={item.title}
                                         effect="blur"
-                                        className="rounded-lg w-full h-70 object-cover mb-4"
+                                        className="rounded-lg w-full sm:h-60 md:h-80 lg:h-96 object-cover mb-4"
                                     />
                                     <p className="text-sm text-gray-600">{item.desc}</p>
                                 </div>
