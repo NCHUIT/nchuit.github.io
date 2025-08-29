@@ -235,6 +235,17 @@ function Members() {
       ],
       image: getImagePath("images/members/chengyou.jpg"),
     },
+    {
+      id: 11,
+      name: "朱容徵",
+      role: "活動",
+      department: "???",
+      year: "大二",
+      description: [
+        "神秘神秘神秘神秘神秘神秘神秘神秘神秘神秘",
+      ],
+      image: getImagePath(""),
+    },
   ];
 
   return (
