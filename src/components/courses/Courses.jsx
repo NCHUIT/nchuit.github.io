@@ -2,6 +2,7 @@ import { useState } from "react";
 import CourseModal from "../widget/CourseModal";
 import CourseCard from "./CourseCard";
 import coursesData from "../../data/coursesData";
+import oldCoursesData from "../../data/oldCoursesData";
 
 function Courses() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -40,6 +41,30 @@ function Courses() {
         </div>
       </div>
 
+      <div className="w-24 h-25 mx-auto"></div>
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-gray-800 mb-4">
+            課程回顧
+          </h2>
+          <div className="w-24 h-1 bg-green-600 mx-auto"></div>
+          <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
+            好奇我們做過甚麼，或者想更了解課程嗎?以下有過去的課程回顧~
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 ml-10 mr-10">
+          {oldCoursesData.map((course) => (
+            <CourseCard
+              key={course.id}
+              course={course}
+              onOpenModal={openModal}
+            />
+          ))}
+        </div>
+      </div>
+
+
       {/* 課程詳情懸浮視窗 */}
       {selectedCourse && (
         <CourseModal
@@ -53,6 +78,8 @@ function Courses() {
           registrationLink={selectedCourse.registrationLink}
         />
       )}
+
+
     </section>
   );
 }

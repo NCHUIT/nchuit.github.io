@@ -34,7 +34,7 @@ function CourseCard({ course, onOpenModal }) {
           >
             課程詳情
           </button>
-          <a
+          {course.registrationLink && (<a
             href={course.registrationLink}
             target="_blank"
             rel="noopener noreferrer"
@@ -42,7 +42,7 @@ function CourseCard({ course, onOpenModal }) {
             style={{ backgroundColor: course.color }}
           >
             立即報名
-          </a>
+          </a>)}
         </div>
       </div>
     </div>
