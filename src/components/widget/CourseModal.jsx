@@ -91,6 +91,7 @@ function CourseModal({
   image,
   description,
   info,
+  faq,
   color,
   registrationLink,
 }) {
@@ -156,15 +157,16 @@ function CourseModal({
     >
       <div
         ref={modalRef}
-        className={`bg-white rounded-lg shadow-xl w-full max-w-5xl max-h-[90vh] overflow-y-auto modal-scrollbar transition-all duration-300 ease-in-out transform ${
+        className={`bg-white rounded-lg shadow-xl w-full max-w-5xl max-h-[90vh] transition-all duration-300 ease-in-out transform ${
           isVisible ? "scale-100 opacity-100" : "scale-95 opacity-0"
-        } flex flex-col md:flex-row`}
+        } flex flex-col md:flex-row overflow-hidden`} // 移除 overflow-y-auto，添加 overflow-hidden
       >
         {/* 內容容器 - 在手機上可以整體滾動 */}
-        <div className="flex flex-col md:flex-row w-full">
-          {/* 海報區域 */}
+        {/* 手機版：flex-col 讓海報和資訊垂直排列。 桌面版：flex-row 讓它們水平排列 */}
+        <div className="flex flex-col md:flex-row w-full overflow-y-auto md:overflow-y-hidden modal-scrollbar">
+          {/* 海報區域 (左側) */}
           <div
-            className="md:w-2/5 flex items-center justify-center md:sticky md:top-0 md:h-screen md:max-h-[90vh]"
+            className="md:w-2/5 md:flex-shrink-0 flex items-center justify-center"
             style={{ backgroundColor: color || "#4CAF50" }}
           >
             {image ? (
@@ -189,7 +191,7 @@ function CourseModal({
                 </div>
               </div>
             ) : (
-              <div className="w-full h-64 md:h-full flex items-center justify-center">
+              <div className="w-full h-64 md:h-auto flex items-center justify-center">
                 <h2 className="text-white text-3xl font-bold p-6 text-center">
                   {title}
                 </h2>
@@ -198,7 +200,7 @@ function CourseModal({
           </div>
 
           {/* 右側資訊區域 */}
-          <div className="md:w-3/5 p-6">
+          <div className="md:w-3/5 p-6 md:overflow-y-auto modal-scrollbar">
             <div className="flex justify-between items-center mb-6">
               <h3 className="text-2xl font-bold text-gray-800">{title}</h3>
               <button
@@ -259,6 +261,28 @@ function CourseModal({
                       ))}
                     </ul>
                   )}
+                </div>
+              </div>
+            )}
+
+            {faq && (
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold mb-2 text-gray-800">
+                  FAQ
+                </h4>
+                <div className="space-y-4">
+                  {faq.map((item, index) => (
+                    <div
+                      key={index}
+                      className="border-l-4 pl-3"
+                      style={{ borderColor: color }} // <-- 套用 JSON 的 color
+                    >
+                      <p className="font-medium" style={{ color: color }}>
+                        Q: {item.q}
+                      </p>
+                      <p className="text-gray-600">A: {item.a}</p>
+                    </div>
+                  ))}
                 </div>
               </div>
             )}

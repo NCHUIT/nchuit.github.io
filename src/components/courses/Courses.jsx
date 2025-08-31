@@ -74,6 +74,7 @@ function Courses() {
           image={selectedCourse.image}
           description={selectedCourse.description}
           info={selectedCourse.info}
+          faq={selectedCourse.faq}
           color={selectedCourse.color}
           registrationLink={selectedCourse.registrationLink}
         />
