@@ -82,7 +82,7 @@ function Members() {
       name: "賴庭岳",
       role: "社長",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         "本社的靈魂人物，負責社團的日常運作與規劃。基本上是個與社團靈魂綁定的存在。",
         "程競和專案開發兼修，常用 C++/Python/JavaScript，也有做過物聯網專案。",
@@ -99,7 +99,7 @@ function Members() {
       name: "侯竣奇",
       role: "副社長",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         "雖然自稱 Golang 廚但一直用 Python 開發新專案。主要的工作是負責協助社長處理社團事務。",
         "有時候也會奴役 AI 幫自己寫網站，近期有疑似越來越愛用 Cursor 的跡象。",
@@ -125,7 +125,7 @@ function Members() {
       name: "曾崇恩",
       role: "總務",
       department: "生物產業機電工程學系",
-      year: "大二",
+      year: "大三",
       description: [
         ["他是我們的財政部長\n", "期末請客都靠他（X"],
         "因為請客實在太重要了我不敢亂寫，只好把介紹空著等他自己來補。",
@@ -137,7 +137,7 @@ function Members() {
       name: "賴威廷",
       role: "教學",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         "演算法大佬，整天都在裝弱。口中盡是些「線段樹」、「最小生成樹」之類知乎者也的話。",
         "你真的可以看到他抱著一本很厚的演算法在啃，而且啃得很開心。",
@@ -151,7 +151,7 @@ function Members() {
       name: "蔡允維",
       role: "教學",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         "雖然一直說要走電機，但是好像也很容易在程競比賽看見他的身影。",
         "擔任我們社團的 3D 列印講師，也常常打 Arduino 或機器人比賽。",
@@ -163,7 +163,7 @@ function Members() {
       name: "王珈源",
       role: "網管",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         [
           "擅長使用 ",
@@ -183,7 +183,7 @@ function Members() {
       name: "鄭弘翊",
       role: "美宣",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         "我們社團的美術擔當，你可以看到的海報大部分都是他做的，同時也會電繪及 Photoshop。",
         "Stable Diffusion 愛用者：身為「資訊」社的美宣，理所應當地很擅長結合 AI 生圖與修圖，極度高產地維持社團文宣圖的產出。",
@@ -200,7 +200,7 @@ function Members() {
       name: "鍾冠泓",
       role: "行銷",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         "負責我們社團的行銷、Email 及宣傳文案，同時也擔任我們的剪輯師。",
         "職掌非常廣泛，其實常常會被我們抓去打輔助。比如講以不同的視角優化我們的上課方式及網站，可以說是最佳品管師。",
@@ -216,7 +216,7 @@ function Members() {
       name: "龔裕棠",
       role: "公關",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         "負責處理 Facebook、Instagram 的貼文及訊息回覆。平常做事很低調。",
         "低調的人通常都是狠角色，所以我把簡介放在這邊等他自己來補！（已逃跑",
@@ -228,7 +228,7 @@ function Members() {
       name: "林丞佑",
       role: "小編",
       department: "電機資訊學院學士班",
-      year: "大二",
+      year: "大三",
       description: [
         "大家覺得一個社團的 Threads 小編需要具備什麼特質？想必是…",
         "究極活網！！！相信大家自然而然會從網路上認識他的。",
@@ -239,12 +239,12 @@ function Members() {
       id: 11,
       name: "朱容徵",
       role: "活動",
-      department: "???",
-      year: "大二",
+      department: "土木工程",
+      year: "大三",
       description: [
-        "神秘神秘神秘神秘神秘神秘神秘神秘神秘神秘",
+        "我土木讀到有點無聊，對打code有點興趣就跑過來參加看看在幹嘛了，哈哈",
       ],
-      image: getImagePath(""),
+      image: getImagePath("images/members/activity.jpg"),
     },
   ];
 
