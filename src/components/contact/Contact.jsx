@@ -187,13 +187,18 @@ function Contact() {
                 社團時間
               </h3>
               <ul className="space-y-2 text-gray-600">
-                <li className="flex justify-between">
+                {/* <li className="flex justify-between">
                   <span>每週三 18:30 後</span>
                   <span>跨域興學習</span>
-                </li>
+                </li> */}
                 <li className="flex justify-between">
-                  <span>每週四 19:00 - 21:00</span>
+                  <span>每週二 19:00 - 21:00</span>
                   <span>例行社課</span>
+                </li>
+                <li>
+                  <span>
+                    欲獲得更準確時間，請查看活動日曆、課程資訊或者是我們的IG喔!!!
+                  </span>
                 </li>
               </ul>
             </div>
