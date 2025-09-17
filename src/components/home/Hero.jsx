@@ -13,7 +13,7 @@ function Hero() {
 
   return (
     <div className="bg-gradient-to-r from-green-800 to-green-600 text-white">
-      <div className="container mx-auto px-4 py-20">
+      <div className="container mx-auto px-4 py-20 md:py-40">
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:w-1/2 mb-10 md:mb-0 ml-10 mr-10">
             <h1 className="text-2xl md:text-4xl font-bold mb-4">
