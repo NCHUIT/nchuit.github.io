@@ -7,7 +7,7 @@ const coursesData = [
   {
     id: "auto-car",
     title: "Arduino 自走車設計",
-    image: getImagePath("images/courses/coming_soon.jpg"),
+    image: getImagePath("images/courses/auto_car.jpg"),
     description: [
       [
         "將引導社員從零開始，親手打造一台具備基本自走功能的 ",
@@ -65,7 +65,7 @@ const coursesData = [
   {
     id: "vibe-coding",
     title: "Vibe Coding - 適合所有人的 Coding 方式",
-    image: getImagePath("images/courses/coming_soon.jpg"),
+    image: getImagePath("images/courses/vibe_coding.jpg"),
     description: [
       "本課程將引導學員從零開始，認識程式設計的世界。課程內容包含基礎程式概念、變數、迴圈、函式等核心知識，並透過 Vibe Coding，讓你用最直覺的方式寫出程式碼。你將學會如何運用程式碼控制硬體設備，創造出獨一無二的互動裝置，體驗動手做的樂趣，並將你的創意付諸實現。",
     ],
@@ -79,7 +79,7 @@ const coursesData = [
         "相關連結：",
         {
           text: "Instagram 貼文",
-          link: "",
+          link: "https://www.instagram.com/p/DOxbsGPEfr3/",
         },
       ],
     ],
@@ -110,7 +110,7 @@ const coursesData = [
   {
     id: "machine-learning",
     title: "機器學習",
-    image: getImagePath("images/courses/coming_soon.jpg"),
+    image: getImagePath("images/courses/machine_learning.jpg"),
     description: [
       "本課程將引導學員從零開始，探索機器學習的奧秘。課程內容涵蓋基礎數學、資料分析、監督式學習、非監督式學習等核心概念，並透過實際案例，帶領你了解如何應用機器學習模型，解決現實生活中的各種問題。你將學會如何訓練模型，讓電腦從龐大數據中自動學習並找出規律，進而做出預測或分類。不論是想了解人工智慧的運作原理，或是對數據分析感興趣，都能在本課程中獲得寶貴的知識與實戰經驗。",
     ],
@@ -124,7 +124,7 @@ const coursesData = [
         "相關連結：",
         {
           text: "Instagram 貼文",
-          link: "",
+          link: "https://www.instagram.com/p/DOtKmBTE0UW/",
         },
       ],
     ],
@@ -163,7 +163,7 @@ const coursesData = [
   {
     id: "commercial-bot",
     title: "量化交易 Bot",
-    image: getImagePath("images/courses/coming_soon.jpg"),
+    image: getImagePath("images/courses/commercial_bot.jpg"),
     description: [
       "本課程將帶領學員進入量化交易的世界。你將學習如何運用數據分析與程式設計，將自己的交易策略自動化。課程內容涵蓋基礎交易概念、回測方法、風險管理以及 Bot 的實際建置。我們將探討如何從歷史數據中發掘可行的交易模式，並使用程式碼將這些模式轉換成能夠自動執行買賣決策的交易 Bot。透過本課程，你將學會如何打造一個專屬的自動化交易系統，有效管理交易風險，並體驗程式交易的獨特魅力。",
       "⚠️投資一定有風險，基金投資有賺有賠，本課程不具備任何投資建議 ",
