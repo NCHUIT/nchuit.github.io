@@ -7,7 +7,7 @@ const coursesData = [
   {
     id: "auto-car",
     title: "Arduino 自走車設計",
-    image: getImagePath("images/courses/auto_car.jpg"),
+    image: getImagePath("images/courses/auto_car_new.jpg"),
     description: [
       [
         "將引導社員從零開始，親手打造一台具備基本自走功能的 ",
@@ -21,7 +21,7 @@ const coursesData = [
       ],
     ],
     info: [
-      "課程日期：11/4 11/11 11/18 11/25 (週二）",
+      "課程日期：11/11 11/18 11/25 12/2 (週二）",
       "課程時間：19:00 ~ 21:00",
       "課程地點：中興大學雲平樓，教室請關注最新公告",
       "課程講師：蔡允維(教學/Arduino秘術召喚機器人召喚圖論生成電神)",
@@ -30,7 +30,7 @@ const coursesData = [
         "相關連結：",
         {
           text: "Instagram 貼文",
-          link: "",
+          link: "https://www.instagram.com/p/DQdzrcdkYW0/?img_index=2",
         },
       ],
     ],
@@ -163,13 +163,13 @@ const coursesData = [
   {
     id: "commercial-bot",
     title: "量化交易 Bot",
-    image: getImagePath("images/courses/commercial_bot.jpg"),
+    image: getImagePath("images/courses/commercial_bot_new.jpg"),
     description: [
       "本課程將帶領學員進入量化交易的世界。你將學習如何運用數據分析與程式設計，將自己的交易策略自動化。課程內容涵蓋基礎交易概念、回測方法、風險管理以及 Bot 的實際建置。我們將探討如何從歷史數據中發掘可行的交易模式，並使用程式碼將這些模式轉換成能夠自動執行買賣決策的交易 Bot。透過本課程，你將學會如何打造一個專屬的自動化交易系統，有效管理交易風險，並體驗程式交易的獨特魅力。",
       "⚠️投資一定有風險，基金投資有賺有賠，本課程不具備任何投資建議 ",
     ],
     info: [
-      "課程日期：12/2 12/9（週二）",
+      "課程日期：12/9 12/16（週二）",
       "課程時間：19:00 ~ 21:00",
       "課程地點：中興大學雲平樓，教室請關注最新公告",
       "課程講師：賴庭岳(社長/深度優先暗中捲完專案全知全能電神)",
@@ -178,7 +178,7 @@ const coursesData = [
         "相關連結：",
         {
           text: "Instagram 貼文",
-          link: "",
+          link: "https://www.instagram.com/p/DQdzrcdkYW0/?img_index=3",
         },
       ],
     ],

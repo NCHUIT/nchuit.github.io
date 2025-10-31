@@ -1,0 +1,33 @@
+.announcement-banner {
+  color: white;
+  padding: 0.5rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.announcement-scroll-container {
+  display: flex;
+  animation: scroll-left 60s linear infinite;
+}
+
+.announcement-text {
+  flex-shrink: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+}
+
+.announcement-text:hover {
+    text-decoration: underline;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
