@@ -5,7 +5,7 @@ import Announcement from "../../components/home/Announcement";
 function HomePage() {
   return (
     <>
-      <Announcement />
+      {/* <Announcement /> */}
       <Hero />
       <Calendar />
     </>

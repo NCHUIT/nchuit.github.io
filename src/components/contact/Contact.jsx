@@ -192,7 +192,7 @@ function Contact() {
                   <span>跨域興學習</span>
                 </li> */}
                 <li className="flex justify-between">
-                  <span>每週二 19:00 - 21:00</span>
+                  <span>每週四 19:00 - 21:00</span>
                   <span>例行社課</span>
                 </li>
                 <li>
